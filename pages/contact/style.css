@@ -1,0 +1,43 @@
+p,h3 {
+    font-family:'Dancing Script', cursive;
+    font-weight:900;
+    color: #540808;
+}
+
+
+.container-contact {
+    display: flex;
+    flex-direction: column;
+}
+
+.container-contact div {
+    /*border: 2px solid #540808;*/
+	padding: 10px;
+	justify-content: center;
+}
+
+.row {
+    /*border: 2px solid red;*/
+}
+
+.find-us {
+    display: flex;
+    flex-direction: row;
+}
+
+@media screen and (max-width: 860px) {
+    .find-us {
+        flex-direction: column;
+    }
+}
+
+.address-box {
+    width: 40%
+}
+
+.details-box {
+    padding: 15px;
+    background-image: url('../../images/contact-form.jpg');/* to correct*/
+    max-width: fit-content;
+    align-self  : center;
+}

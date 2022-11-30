@@ -1,0 +1,99 @@
+body{
+    text-align: center;
+    color: black;
+    width: 100%;
+}
+
+h1{
+    font-family:'Dancing Script', cursive;
+    font-weight:900;
+    color: #d80a0a;
+}
+
+/* Top section (Logo and navbar)*/
+.top{
+    height:370px;
+    background-image: url(../../images/cupcakes-header1.jpg);
+    background-size:cover;
+    background-color:   rgb(243,244,249);  /* If image doesn't load this will be the background */
+    color: black;
+    justify-content: space-between;
+    padding:2% 10%; /* Some padding so that text is not at the edges of the page */
+}
+
+/* LOGO*/
+#logo{ 
+    /* styling logo: max width and heigh allow logo to fit in "top" section, height:auto to make logo scale up and down with page size */
+    width: 100%;
+    max-width: 200px;
+    max-height: 200px;
+    height: auto; 
+    left: 50%;
+}
+
+.logo-div{
+    transform: translateY(-50%); /* moving logo div on Y axis -50% so it moves up on top div to place logo in the middle of both div elements*/
+}
+
+/* Nav Bar */
+.navbar{ 
+    /* styling Bootstrap Navbar */
+    background-color: none;    
+    color: black;
+    font-weight:600;
+    float: right; /* NavBar to the right of top div */
+}
+
+.nav-item{
+    padding: 0 18px; /* adding 18px padding left and right of navbar */
+  }
+
+.dropdown-menu{
+   /* background: none; removing whte background from dropdown menu to show cake background image of top section */
+}
+
+.dropdown-item{
+    font-weight: 400;
+}
+
+
+/* Middle section */
+.separator{
+    display: flex;
+    height: 50px;
+    background-image: url(../../images/174.jpg);
+    background-size: contain;
+    transform: translateY(-100%);
+}
+
+
+/* Bottom section */
+
+.bottom{
+    height: 600px;
+    display: flex;
+}
+
+/* Footer */
+.footer{
+    display: flex;
+    background-color: rgb(243,244,249);
+    height: 100%;
+    padding: 30px;
+}
+
+.toTop{
+    background-color: inherit;
+    border: none;
+}
+
+.toTop:hover{
+    opacity: 0.5;
+}
+
+
+
+
+
+
+

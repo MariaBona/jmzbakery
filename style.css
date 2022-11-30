@@ -156,8 +156,7 @@ h5,p, h6{
     display: flex;
     flex-wrap: wrap;
     padding: 60px 90px 60px; 
-    /*background-image: url(images/174.jpg);*/
-    background-size: cover;
+    background-color: rgb(243,244,249);
 	
 }
 
@@ -170,8 +169,7 @@ h5,p, h6{
 }
 
 .cards img:hover{
-    transform: scale(1.1); /*creating slight zoom for imagesin cards*/
-	border: 2px solid;
+    transform: scale(1.1); /*creating slight zoom for images in cards*/
 	
 }
 
@@ -259,13 +257,14 @@ form button{
 	
     background-size: 100% ;
 	background-attachment: scroll;
-	
+	height: auto;
 
 	text-align: center;
 	background-size: cover; 
 	background-repeat: no-repeat; 
 	background-attachment: scroll; 
 	animation: 0s ease 0s 1 normal none running none; 	
+
 	
 }
 
@@ -279,32 +278,43 @@ form button{
 	margin-right: 50px;
 	text-align: left;    
 	//font-family: "Arial", sans-serif;
-	font-size: 30px;
+	
 	
 	font-weight: bold;
 
 	
-	 background:  url(images/logo-bw.png) no-repeat center ;
+	background:  url(images/logo-bw.png) no-repeat center ;
 	 
-	 background-image: url("images/cakes_home/baking-fade.jpg");
-	// background:  url(images/c2-fade.jpg) no-repeat center ;
+	background-image: url("images/cakes_home/baking-fade.jpg");
 	background-size: cover; background-position: 50% 50%; background-repeat: no-repeat; 
-	background-attachment: scroll; 	
+	background-attachment: scroll; 		
 	
-	opacity: 80%;
 	box-shadow: 1px 1px 5px 1px #867979;
 	
 	font-family:'Helvetica', cursive;
-    font-weight:100;
+	font-size: 20px;
+    font-weight:50px;
     color: #540808;
 	
-	 flex-direction: column;
+
     width: 90%;
-    height: auto;
+
     align-items: center;   
     padding:2% 10% 2%;
-    color: black;
+    
 
+}
+
+.about img{
+    max-width:100%;
+    max-height:100%;
+    width: 250px;
+    height: 200px;
+
+}
+
+.about img:hover{
+    transform: scale(1.1); /*creating slight zoom for imagesin cards*/
 }
 
 
@@ -313,12 +323,17 @@ form button{
 }
 
 
+
 .about-text-outer{
 	background: white;
 	font-family:'Dancing Script', cursive;
     font-weight:900;
     color: #540808;
 	
+}
+
+.about{
+    padding-bottom: 20px;
 }
 
 

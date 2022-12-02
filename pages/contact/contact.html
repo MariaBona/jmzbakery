@@ -112,29 +112,37 @@
       <!--Container for flexboxes-->
       <div class="container-contact">
         <div class="find-us">
-          <div class="address-box">
-            <p><h3><strong>Our address:</strong></h3><br></p>
-            <p>
-              9 Adamstown Boulevard<br>
-              Adamstown Castle<br>
-              Lucan<br>
-            </p>
-            <p><h3><strong>Our telephone number:</strong></h3><br></p>
-             <p>0831603826</p>
-            <p><h3><strong>Our e-mail address:</strong></h3></p>
-            <p>jmz.bakeryproject@gmail.com</p>
+          <div class="map-box"> <!--insert map here beside the address on the right-->
+            <h3><strong>Get directions:</strong></h3><br>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2382.2164941216183!2d-6.471266348651563!3d53.33938067987932!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x486773c966cfccff%3A0xd7eaa366a1bc45a6!2s19%20Adamstown%20Blvd%2C%20Finnstown%2C%20Lucan%2C%20Co.%20Dublin%2C%20K78%20W894!5e0!3m2!1sen!2sie!4v1670000911147!5m2!1sen!2sie" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <div class="row separator_blank"></div>
           </div>
-          <!--insert map here beside the address on the right, TODO: change the language for maps-->
-          <div class="map-box">
-            <h3>Get directions:</h3>
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2382.232363920127!2d-6.471289284373915!3d53.33909658295555!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x486773c967d09e01%3A0x615731749f425f79!2s9%20Adamstown%20Blvd%2C%20Finnstown%2C%20Lucan%2C%20Co.%20Dublin%2C%20K78%20CD89!5e0!3m2!1spl!2sie!4v1667609894460!5m2!1spl!2sie" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          <div class="address-box">
+            
+            <h3><strong>Our Contacts:</strong></h3><br>
+              <div class="row separator_blank"></div>
+              <h3><strong>Our telephone number:</strong></h3><br>
+              <p>0831603825<br></p>
+              <h3><strong>Our e-mail address:</strong></h3>
+              <p>jmz.bakeryproject@gmail.com</p>
+              
+              <h3><strong>Our address:</strong></h3><br>
+              <p>19 Adamstown Boulevard<br>
+                Adamstown Castle<br>
+                Lucan</p>
+            
           </div>
 
           <!--form to send email-->
         </div>
-        <div class="details-box">
+        <div class="row separator_blank"></div>
+        <h3>Or leave us your details, we will contact you shortly</h3>
+        <div class="row separator_blank"></div>
+        <div class="details-box" id="contact-form">
+          
           <form onsubmit="sendEmail(); reset(); return false">
-            <h3>Or leave us your details, we will contact you shortly</h3>
+            
+            
           
             <label for="Name">Enter your name:</label><br>
             <input type="text" id="name-input" name="Name" placeholder="John Smith" required><br>
@@ -151,9 +159,11 @@
           </form>
         </div>
         <!-- Bottom section Follow Us on FB ref Meta for Developers-->
+        
         <p><h3>Find us on facebook:</h3></p>
+        
         <div class="fb-page" data-href="https://www.facebook.com/profile.php?id=100088157383912" data-tabs="timeline" data-width="500" data-height="" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/profile.php?id=100088157383912" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/profile.php?id=100088157383912">J.M.Z Bakery</a></blockquote></div>
-        <p></p> 
+        <div class="row separator_blank"></div>
         <p></p>
       </div>
         

@@ -1,4 +1,4 @@
-p,h3 {
+h3 {
     font-family:'Dancing Script', cursive;
     font-weight:900;
     color: #540808;
@@ -37,7 +37,7 @@ p,h3 {
 
 .details-box {
     padding: 15px;
-    background-image: url('../../images/contact-form.jpg');/* to correct*/
+    background-color: white;
     max-width: fit-content;
     align-self  : center;
 }

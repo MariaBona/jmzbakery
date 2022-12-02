@@ -45,7 +45,7 @@
     <div class="container-fluid">
 
    
-      <div class="row separator_blank">
+      <div id="navbar" class="row separator_blank sticky"> <!--added id and class to this div to create sticky navbar feature-->
 
         <!-- Nav Bar -->
         <div class="col-sm-3 col-lg-12">
@@ -57,7 +57,7 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
               <ul class="navbar-nav ml-auto ">
                 <li class="nav-item">
-                  <a class="nav-link" aria-current="page" href="index.html">Home</a>
+                  <a class="nav-link active" aria-current="page" href="index.html">Home</a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" href="pages/about/about.html">About Us</a>
@@ -65,7 +65,7 @@
                 <li class="nav-item dropdown">
                   <a class="nav-link dropdown-toggle"  href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" > Our Products </a>
                   <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="pages/Birthday cakes/birthday.html">Birthday Cakes</a> </li>
+                    <li><a class="dropdown-item" href="pages/birthday/birthday.html">Birthday Cakes</a> </li>
                     <li><a class="dropdown-item" href="pages/Wedding cakes/Wedding_cakes.html">Wedding Cakes</a> </li>
                     <li><a class="dropdown-item" href="pages/occasion cakes/Seasonal Cakes.html">Seasonal Cakes</a> </li>
                     <li> <a class="dropdown-item" href="#">Sweet Boxes</a> </li>
@@ -75,8 +75,8 @@
                   <a class="nav-link" href="pages/contact/contact.html">Contact Us</a>
                 </li>
                 <li class="nav-item ">                  
-				  <a class="nav-link material-symbols-outlined" href="pages/login/login.html" id="login-icon"><div>person</div><div><span id="LoginId"></span></div></a>	
-				  <a class="nav-link material-symbols-outlined" href="#"  id="cart-icon"><div>shopping_cart</div><div><span id="cart"></span></div></a>
+                <a class="nav-link material-symbols-outlined" href="pages/login/login.html" id="login-icon"><div>person</div><div><span id="LoginId"></span></div></a>	
+                <a class="nav-link material-symbols-outlined" href="#"  id="cart-icon"><div>shopping_cart</div><div><span id="cart"></span></div></a>
                 </li>
               </ul>
             </div>
@@ -99,26 +99,30 @@
 
        <!-- Middle section and slideshow -->
 
-      <div class="slideshow middle">
+       <div class="row tagline pb-3">
+        <h1>Every flavor has a story...</h1>
+       </div>
 
-        <div class="mySlides"> 
-          <img src="images/cakes_home/cherry_cake.jpg" style="width:100%">
-          <div class="text">Caption Text</div>
+      <div class="slideshow middle col-sm-5 col-lg-12">
+
+        <div class="mySlides fade"> 
+          <img src="images/cakes_home/cherry_cake.jpg" alt="cake picture"  style="width:100%">
+          <div class="text">Cherry cream sponge cake</div>
         </div>
 
-        <div class="mySlides"> 
-          <img src="images/cakes_home/dessert-ga0282781c_1920.jpg" style="width:100%">
-          <div class="text">Caption Text</div>
+        <div class="mySlides fade"> 
+          <img src="images/cakes_home/dessert-ga0282781c_1920.jpg" alt="cake picture" style="width:100%">
+          <div class="text">Unicorn theme birthday cake</div>
         </div>
 
-        <div class="mySlides"> 
-          <img src="images/cakes_home/BirthdayMini.jpg" style="width:100%">
-          <div class="text">Caption Text</div>
+        <div class="mySlides fade"> 
+          <img src="images/cakes_home/BirthdayMini.jpg" alt="cake picture" style="width:100%">
+          <div class="text">Mini mouse birthday cake</div>
         </div>
 
-        <div class="mySlides"> 
-          <img src="images/cakes_home/Wedding_Slide.jpg" style="width:100%">
-          <div class="text">Caption Text</div>
+        <div class="mySlides fade"> 
+          <img src="images/cakes_home/Wedding_Slide.jpg" alt="cake picture" style="width:100%">
+          <div class="text">Multi-level vanilla cream wedding cake</div>
         </div>
 
         <a class="prev" onclick="plusSlides(-1)"> ❮ </a> <!--calls function plusSlides on click and passes "-1" to the function to go back one slide -->
@@ -133,16 +137,20 @@
         <h1>Discover our personalized Wedding cakes</h1>
 
         <div class="col-lg-3 col-md-3 col-sm-5 card-div">
-          <a href="#" class="btn card-img"><img src="images/cakes_home/Wedding1.jpg" alt=""></a>
+          <a href="#" class="btn card-img"><img src="images/cakes_home/Wedding1.jpg" alt="">
+          <div class="text-card">Price 50 - 200€</div></a>
         </div>
         <div class="col-lg-3 col-md-3 col-sm-5 card-div">
-          <a href="#" class="btn card-img"><img src="images/cakes_home/Wedding2.jpg" alt=""></a>
+          <a href="#" class="btn card-img"><img src="images/cakes_home/Wedding2.jpg" alt="">
+          <div class="text-card">Price 50 - 200€</div></a>
         </div>
         <div class="col-lg-3 col-md-3 col-sm-5 card-div">
-          <a href="#" class="btn card-img"><img src="images/cakes_home/candy-cake.jpg" alt=""></a>
+          <a href="#" class="btn card-img"><img src="images/cakes_home/candy-cake.jpg" alt="">
+            <div class="text-card">Price 50 - 200€</div></a>
         </div>
         <div class="col-lg-3 col-md-3 col-sm-5 card-div">
-          <a href="#" class="btn card-img"><img src="images/cakes_home/Wedding_sponge.jpg" alt=""></a>
+          <a href="#" class="btn card-img"><img src="images/cakes_home/Wedding_sponge.jpg" alt="">
+            <div class="text-card">Price 50 - 200€</div></a>
         </div>
 
       </div> <!--Cards div end-->
@@ -152,16 +160,20 @@
         <h1>Discover our birthday cake selection</h1>
 
         <div class="col-lg-3 col-md-3 col-sm-5 card-div">
-          <a href="#" class="btn card-img"><img src="images/cakes_home/baby_1st_birthday.jpg" alt=""></a>
+          <a href="#" class="btn card-img"><img src="images/cakes_home/baby_1st_birthday.jpg" alt="">
+            <div class="text-card">Price 50 - 200€</div></a>
         </div>
         <div class="col-lg-3 col-md-3 col-sm-5 card-div">
-          <a href="#" class="btn card-img"><img src="images/cakes_home/birthday_cupcakes.jpg" alt=""></a>
+          <a href="#" class="btn card-img"><img src="images/cakes_home/birthday_cupcakes.jpg" alt="">
+            <div class="text-card">Price 50 - 200€</div></a>
         </div>
         <div class="col-lg-3 col-md-3 col-sm-5 card-div">
-          <a href="#" class="btn card-img"><img src="images/cakes_home/birthday_lolipop.jpg" alt=""></a>
+          <a href="#" class="btn card-img"><img src="images/cakes_home/birthday_lolipop.jpg" alt="">
+            <div class="text-card">Price 50 - 200€</div></a>
         </div>
         <div class="col-lg-3 col-md-3 col-sm-5 card-div">
-          <a href="#" class="btn card-img"><img src="images/cakes_home/kids-cupcakes.jpg" alt=""></a>
+          <a href="#" class="btn card-img"><img src="images/cakes_home/kids-cupcakes.jpg" alt="">
+            <div class="text-card">Price 50 - 200€</div></a>
         </div>
 
       </div> <!--Cards div end-->
@@ -170,16 +182,20 @@
         <h1>Discover our seasonal cakes selection</h1>
 
         <div class="col-lg-3 col-md-3 col-sm-5 card-div">
-          <a href="#" class="btn card-img"><img src="images/cakes_home/season1.jpg" alt=""></a>
+          <a href="#" class="btn card-img"><img src="images/cakes_home/season1.jpg" alt="">
+            <div class="text-card">Price 50 - 200€</div></a>
         </div>
         <div class="col-lg-3 col-md-3 col-sm-5 card-div">
-          <a href="#" class="btn card-img"><img src="images/cakes_home/front-view-sweet-chocolate-cake.jpg" alt=""></a>
+          <a href="#" class="btn card-img"><img src="images/cakes_home/front-view-sweet-chocolate-cake.jpg" alt="">
+            <div class="text-card">Price 50 - 200€</div></a>
         </div>
         <div class="col-lg-3 col-md-3 col-sm-5 card-div">
-          <a href="#" class="btn card-img"><img src="images/cakes_home/pink_cake.jpg" alt=""></a>
+          <a href="#" class="btn card-img"><img src="images/cakes_home/pink_cake.jpg" alt="">
+            <div class="text-card">Price 50 - 200€</div></a>
         </div>
         <div class="col-lg-3 col-md-3 col-sm-5 card-div">
-          <a href="#" class="btn card-img"><img src="images/cakes_home/blueberries-cake.jpg" alt=""></a>
+          <a href="#" class="btn card-img"><img src="images/cakes_home/blueberries-cake.jpg" alt="">
+            <div class="text-card">Price 50 - 200€</div></a>
         </div>
 
       </div> <!--Cards div end-->
@@ -188,29 +204,34 @@
         <h1>Discover our sweet boxes</h1>
 
         <div class="col-lg-3 col-md-3 col-sm-5 card-div">
-          <a href="#" class="btn card-img"><img src="images/cakes_home/sweet-box-macaroons.jpg" alt=""></a>
+          <a href="#" class="btn card-img"><img src="images/cakes_home/sweet-box-macaroons.jpg" alt="">
+            <div class="text-card">Price 50 - 200€</div></a>
         </div>
         <div class="col-lg-3 col-md-3 col-sm-5 card-div">
-          <a href="#" class="btn card-img"><img src="images/cakes_home/sweetBox1.jpg" alt=""></a>
+          <a href="#" class="btn card-img"><img src="images/cakes_home/sweetBox1.jpg" alt="">
+            <div class="text-card">Price 50 - 200€</div></a>
         </div>
         <div class="col-lg-3 col-md-3 col-sm-5 card-div">
-          <a href="#" class="btn card-img"><img src="images/cakes_home/sweetBox2.jpg" alt=""></a>
+          <a href="#" class="btn card-img"><img src="images/cakes_home/sweetBox2.jpg" alt="">
+            <div class="text-card">Price 50 - 200€</div></a>
         </div>
         <div class="col-lg-3 col-md-3 col-sm-5 card-div">
-          <a href="#" class="btn card-img"><img src="images/cakes_home/tartelettes.jpg" alt=""></a>
+          <a href="#" class="btn card-img"><img src="images/cakes_home/tartelettes.jpg" alt="">
+            <div class="text-card">Price 50 - 200€</div></a>
         </div>
 
       </div> <!--Cards div end-->
 
 
-      <div class="row separator_blank"></div>
+      <div class="row animation d-flex col-lg-12 col-sm-5">
+
+      </div>
 
 
       <!-- Bottom section -->
 
       <div class = " row d-flex bottom justify-content-center" >
-        <!-- NEED TO ADD CONTENT HERE - Maybe subscription form connected to GoogleSheets-->
-
+      
         <div class="subscription d-flex align-items-center"> 
           <div class="d-flex flex-column">
             <h2> Subscribe to our Newsletter and receive our discounts, special offers and members-only free recipes directly in your inbox:</h2>
@@ -223,7 +244,6 @@
             <span id="msg"></span> 
           </div>       
         </div>
-        
 
       </div>
 
@@ -240,12 +260,11 @@
 
           <div class="row d-flex justify-content-evenly">
           <div class="col-lg-4 cl-md-2 p-4 mb-5 me-3">
-            <p>Let our passion for creating beautiful and unique cakes bring you and your loved ones together for a sweet celebration </p>
             <img class="icon-style mb-2 mt-2"  src="images/phone-call.png"> 
             <h6> Call us today on 0831603826</h2>
           </div>
 
-          <div class="col-lg-2 cl-md-2 float-end p-4 mb-5 me-3" > 
+          <div class="col-lg-2 cl-md-2 float-end mb-5 p-4 me-3" > 
             <p>Follow us on Social Media</p>
             <div class="d-flex justify-content-evenly">
               <a href="https://www.facebook.com/"> <img class="social" src="images/facebook (1).png" alt="facebook logo"></a>
@@ -254,10 +273,10 @@
           </div>
         </div>
 
-        </div>
-
         <div>
           <button class="toTop" onclick="toTop()"> back to top</button> 
+        </div>
+
         </div>
 
       </div> <!--Fotter div end-->

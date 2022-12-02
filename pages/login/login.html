@@ -4,7 +4,7 @@
 <html>
   <head>
 
-    <title>Home page</title>
+    <title>Login page</title>
 
     <!-- Embedding font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -20,9 +20,8 @@
       integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
       crossorigin="anonymous"/>
 
-    
-	
-		<!-- Google Symbols  for Login and Cart -->
+    	
+	<!-- Google Symbols  for Login and Cart -->
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 	
 	
@@ -35,10 +34,6 @@
       integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
       crossorigin="anonymous">
     </script>
-	
-	<!-- JQuery / JavaScript Library-->
-	<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-	
 	
 
 
@@ -55,170 +50,153 @@
 	
 	
 	
-      <div class="row separator_blank">
+		<div id="navbar" class="row separator_blank sticky">
 
-        <!-- Nav Bar -->
-        <div class="col-sm-3 col-lg-12">
-          <nav class="navbar navbar-expand-lg">
-            <div class="container">
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-              <ul class="navbar-nav ml-auto ">
-                <li class="nav-item">
-                  <a class="nav-link" aria-current="page" href="../../index.html">Home</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="../../pages/about/about.html">About Us</a>
-                </li>
-                <li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle"  href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" > Our Products </a>
-                  <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="../birthday/birthday.html">Birthday Cakes</a> </li>
-                    <li><a class="dropdown-item" href="../Wedding cakes/Wedding_cakes.html">Wedding Cakes</a> </li>
-                    <li><a class="dropdown-item" href="#">Seasonal Cakes</a> </li>
-                    <li> <a class="dropdown-item" href="#">Sweet Boxes</a> </li>
-                  </ul>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="../contact/contact.html">Contact Us</a>
-                </li>
-                <li class="nav-item ">                  
-				  <a class="nav-link material-symbols-outlined" href="#" id="login-icon"><div>person</div><div><span id="LoginId"></span></div></a>	
-				  <a class="nav-link material-symbols-outlined" href="#"  id="cart-icon"><div>shopping_cart</div><div><span id="cart"></span></div></a>	
-                </li>
-              </ul>
-            </div>
-            </div>
-          </nav>
-        </div>   
+			<!-- Nav Bar -->
+			<div class="col-sm-3 col-lg-12">
+				<nav class="navbar navbar-expand-lg">
+					<div class="container">
+					<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+					</button>
+					<div class="collapse navbar-collapse" id="navbarSupportedContent">
+						<ul class="navbar-nav ml-auto ">
+							<li class="nav-item">
+							  <a class="nav-link" href="../../index.html">Home</a>
+							</li>
+							<li class="nav-item">
+							  <a class="nav-link" href="../../pages/about/about.html">About Us</a>
+							</li>
+							<li class="nav-item dropdown">
+							  <a class="nav-link dropdown-toggle"  href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" > Our Products </a>
+								 <ul class="dropdown-menu">
+									<li><a class="dropdown-item" href="../birthday/birthday.html">Birthday Cakes</a> </li>
+									<li><a class="dropdown-item" href="../Wedding cakes/Wedding_cakes.html">Wedding Cakes</a> </li>
+									<li><a class="dropdown-item" href="../occasion cakes/occasional.html">Seasonal Cakes</a> </li>							
+								 </ul>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="../contact/contact.html">Contact Us</a>
+							</li>
+							<li class="nav-item ">                  
+								<a class="nav-link material-symbols-outlined active" aria-current="page" href="#" id="login-icon"><div>person</div><div><span id="LoginId"></span></div></a>	
+								<a class="nav-link material-symbols-outlined" href="#"  id="cart-icon"><div>shopping_cart</div><div><span id="cart"></span></div></a>	
+							</li>
+						</ul>
+					</div>
+					</div>
+				</nav>
+			</div>   
+		</div>
 
-      </div>
+		<div class="row top"></div> 
 
-      
+		<div class="row logo-div">
+			<div>
+				<a href="index.html"> <img alt="Bakery logo" id="logo" src="../../images/Logo-bg.png">  </a> <!-- Putting logo in its own div so the clickable area is limited to logo and not entire row -->
+			</div>
+		</div>
 
-      <div class="row top"></div> 
+		  
+		<div class = " row d-flex  justify-content-center   about-area " >
 
-        <div class="row logo-div">
-          <div>
-            <a href="index.html"> <img alt="Bakery logo" id="logo" src="../../images/Logo-bg.png">  </a> <!-- Putting logo in its own div so the clickable area is limited to logo and not entire row -->
-          </div>
-        </div>
 
-	  
-	  <div class = " row d-flex  justify-content-center   about-area " >
+			<!-- Login Form Area -->
+			<div class="row   login-form-area">      
 
-   		
-	 <!-- Login Form Area -->
-		<div class="row   login-form-area">      
+				<div class="login-form" id="showMessage" >
+					<div class="row ">			  
+						<div>
+							<form >
+								<label for="uname">Username</label><br/>
+								<input class="login-text-box" type="text" placeholder="Enter Username" id="userid" required>
+								<br></br>
+								<label for="psw">Password</label> <br/>
+								<input class="login-text-box" type="password" placeholder="Enter Password" id="psw" required>
 
-			<div class="   login-form " >
+							</form>
+							<br/><br/>
+							<button class="btn btn-success"  type="submit" onClick="checkLogin()">Login</button><br/>
+							<br/><br/>
+							<input type="checkbox" checked="checked" name="remember"> Remember me<br/>
+						</div>
+					</div>
 
-			<div class="row">
-			  
-				<div >
-				<form >
-					<label for="uname">Username</label><br/>
-					<input class="login-text-box" type="text" placeholder="Enter Username" id="userid" required>
-					<br></br>
-					<label for="psw">Password</label> <br/>
-					<input class="login-text-box" type="password" placeholder="Enter Password" id="psw" required>
-					
-					</form>
-					<br/><br/>
-					<button class="btn btn-success"  type="submit" onClick="checkLogin()">Login</button><br/>
-					<br/><br/>
-					<input type="checkbox" checked="checked" name="remember"> Remember me<br/>
 				</div>
 			</div>
-			
-		</div>
-				
 
-			
-		</div>
-		
 		</div>
 	</div>
 	  
 
 
 	
-  <div class="row separator_blank"></div>
+	<div class="row separator_blank"></div>
 		  
 	<div class = " row d-flex  justify-content-center" >
+		<div class="row cards">
+
+			<div class="row separator_blank"></div>
+			<h1>Best Selling Cakes</h1>
 
 
+			<div class="col-lg-3 col-md-3 col-sm-5 card-div">
+				<a href="#" class="btn card-img"><img src="../../images/cakes_home/Wedding1.jpg" alt=""></a>
+			</div>
 
-		 <div class="row cards">
-	
-				<div class="row separator_blank"></div>
-				<h1>Best Selling Cakes</h1>
-				
+			<div class="col-lg-3 col-md-3 col-sm-5 card-div">
+				<a href="#" class="btn card-img"><img src="../../images/cakes_home/baby_1st_birthday.jpg" alt=""></a>
+			</div>
 
-				<div class="col-lg-3 col-md-3 col-sm-5 card-div">
-				  <a href="#" class="btn card-img"><img src="../../images/cakes_home/Wedding1.jpg" alt=""></a>
-				</div>
-				
-				<div class="col-lg-3 col-md-3 col-sm-5 card-div">
-				  <a href="#" class="btn card-img"><img src="../../images/cakes_home/baby_1st_birthday.jpg" alt=""></a>
-				</div>
-				
-				  <div class="col-lg-3 col-md-3 col-sm-5 card-div">
-				  <a href="#" class="btn card-img"><img src="../../images/cakes_home/season1.jpg" alt=""></a>
-				</div>
-				<div class="col-lg-3 col-md-3 col-sm-5 card-div">
-				  <a href="#" class="btn card-img"><img src="../../images/cakes_home/front-view-sweet-chocolate-cake.jpg" alt=""></a>
-				</div>
-				
+			<div class="col-lg-3 col-md-3 col-sm-5 card-div">
+				<a href="#" class="btn card-img"><img src="../../images/cakes_home/season1.jpg" alt=""></a>
+			</div>
+			<div class="col-lg-3 col-md-3 col-sm-5 card-div">
+				<a href="#" class="btn card-img"><img src="../../images/cakes_home/front-view-sweet-chocolate-cake.jpg" alt=""></a>
+			</div>
 
-			  </div> <!--Cards div end-->
+
+		</div> <!--Cards div end-->
 
 	</div>
 
 
-      <!-- Bottom section -->
+	<!-- Bottom section -->
 
-      <div class="row separator_blank"></div>
+	<div class="row separator_blank"></div>
       
 
-      <!-- Footer -->
+	<!-- Footer -->
 
-      <div class="row footer d-flex">
-        <div class="col-lg-12 col-sm-5">
-          <p>@2022 - J.M.Z.Bakery. All Right Reserved</p>
-          <br>
+	<div class="row footer d-flex">
+		<div class="col-lg-12 col-sm-5">
+			<p>@2022 - J.M.Z.Bakery. All Right Reserved</p>
+			<br>
 
-          <div class="row d-flex justify-content-evenly">
-          <div class="col-lg-4 cl-md-2 p-4 mb-5 me-3">
-            <p>Let our passion for creating beautiful and unique cakes bring you and your loved ones together for a sweet celebration </p>
-            <img class="icon-style mb-2 mt-2"  src="../../images/phone-call.png"> 
-            <h6> Call us today on 0831603826</h2>
-          </div>
+			<div class="row d-flex justify-content-evenly">
+				<div class="col-lg-4 cl-md-2 p-4 mb-5 me-3">
+					<img class="icon-style mb-2 mt-2"  src="../../images/phone-call.png"> 
+					<h6> Call us today on 0831603826</h2>
+				</div>
 
-          <div class="col-lg-2 cl-md-2 float-end p-4 mb-5 me-3" > 
-            <p>Follow us on Social Media</p>
-            <div class="d-flex justify-content-evenly">
-              <a href="https://www.facebook.com/"> <img class="social" src="../../images/facebook (1).png" alt="facebook logo"></a>
-              <a href="https://www.instagram.com/"><img class="social" src="../../images/instagram.png" alt="instagram logo"></a>
-            </div>
-          </div>
-        </div>
+				<div class="col-lg-2 cl-md-2 float-end mb-5 p-4 me-3" > 
+					<p>Follow us on Social Media</p>
+					<div class="d-flex justify-content-evenly">
+					<a href="https://www.facebook.com/"> <img class="social" src="../../images/facebook (1).png" alt="facebook logo"></a>
+					<a href="https://www.instagram.com/"><img class="social" src="../../images/instagram.png" alt="instagram logo"></a>
+					</div>
+				</div>
+			</div>
 
-        </div>
+			<div>
+				<button class="toTop" onclick="toTop()"> back to top</button> 
+			</div>
 
-        <div>
-          <button class="toTop" onclick="toTop()"> back to top</button> 
-        </div>
+		</div>
 
-      </div> <!--Fotter div end-->
+	</div> <!--Fotter div end-->
 
-    </div>
-
-	    
-    
-<!-- Custom Java Script to check if the user/password are correct -->
+<!--  Java Script to check if the user/password are correct -->
 	<script src="login.js"></script>
   </body>
 </html>

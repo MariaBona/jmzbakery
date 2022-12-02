@@ -56,6 +56,10 @@ h1,h2{
     padding: 0 18px; /* adding 18px padding left and right of navbar */
   }
 
+.nav-item:hover{
+    opacity: .7;
+}
+
 /*Adjusting font of navbar links*/
 .navbar a{
     color: #540808;
@@ -64,6 +68,36 @@ h1,h2{
 .dropdown-item{
     font-weight: 400;
 }
+
+.active{
+    text-decoration:overline;
+}
+
+.sticky{
+    position: fixed;
+    background-color: white;
+    top: 0;
+    width: 100%;
+    z-index: 9999;
+}
+
+
+@keyframes tagline {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+  
+  .tagline {  
+    /* This section calls the tagline animation we defined above */
+    animation: 1s ease-out 0s 1 tagline;
+    background: white;
+    padding: 30px;
+    animation-duration: 2s;
+  }
 
 
 
@@ -75,8 +109,7 @@ h1,h2{
     .middle{
         display: flex;
         flex-wrap: wrap;
-        width: 100%;
-        max-width: 1000px;
+        width: 50%;
         position: relative; /* position is relative here and the arrows will be positioned absolute on top of this div */
         margin: auto;
         }
@@ -87,8 +120,13 @@ h1,h2{
     }
 
     .mySlides img {
+        max-width:100%;
+        max-width: 100%;
         vertical-align: middle;
         border-radius: 2%;
+        object-fit: cover;
+        width: 900px;
+        height: 550px;
     }
 
     /* Next & previous buttons */
@@ -119,9 +157,14 @@ h1,h2{
 
     /* Caption text */
     .text {
-    color: #f2f2f2;
-    font-size: 15px;
+    font-family:'Dancing Script', cursive;
+    font-weight:900;
+    color: #540808;
+    opacity: .6;
+    background: -moz-linear-gradient(to bottom, rgb(243,244,249), rgb(200, 202, 209));
+    background: linear-gradient(to bottom, rgb(243,244,249), rgb(200, 202, 209));
     padding: 8px 12px;
+    font-size:x-large;
     position: absolute;
     bottom: 8px;
     width: 100%;
@@ -130,15 +173,20 @@ h1,h2{
 
     /* Fading animation */
     .fade {
+        /* For Chrome and Safari */
+        -webkit-animation-name: fade;
+        -webkit-animation-duration: 1.0s;
+        -webkit-animation-fill-mode: forwards; 
+        /* other browsers */
         animation-name: fade;
         animation-duration: 1.5s;
-    }
+        animation-fill-mode: forwards; 
+      }
     
     @keyframes fade {
-        from {opacity: .4}
+        from {opacity: .7}
         to {opacity: 1}
     }
-
 
   
 /* Text styling */
@@ -173,6 +221,10 @@ h5,p, h6{
 	
 }
 
+.text-card{
+    padding-top: 5px;
+}
+
 .card-div{
     display: flex;
     align-items: center;
@@ -187,7 +239,7 @@ h5,p, h6{
 }
 
 .wedding-cards img:hover{
-    transform: scale(1.1); /*creating slight zoom for imagesin cards*/
+    transform: scale(1.1); /*creating slight zoom for images in cards*/
 }
 
 .separator_blank{
@@ -198,13 +250,18 @@ h5,p, h6{
     
 }
 
+.animation{
+    height:400px;
+
+}
+
 
 /* Bottom section */
 
 .bottom{
     height: 400px;
     display: flex;
-    background-image: url("images/cakes_home/baking.jpg");
+    background-image: url("images/cakes_home/baking-fade.jpg");
 	background-size: cover; 
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -247,70 +304,49 @@ form button{
 }
 
 
-
+/* Author2: Jayasri - START*/
 /* CSS About : START */
 
 .about-area{
-
-	border: 0px solid;
-
-	
+	border: 0px solid;	
     background-size: 100% ;
 	background-attachment: scroll;
 	height: auto;
-
 	text-align: center;
 	background-size: cover; 
 	background-repeat: no-repeat; 
 	background-attachment: scroll; 
-	animation: 0s ease 0s 1 normal none running none; 	
-
-	
+	animation: 0s ease 0s 1 normal none running none; 		
 }
 
 .about-text{
-
 	border: 5px solid;
 	border-color: white;
 	border-radius: 100px;
 	border-radius: 5px;
 	margin-left: 100px;
 	margin-right: 50px;
-	text-align: left;    
-	//font-family: "Arial", sans-serif;
-	
-	
-	font-weight: bold;
-
-	
-	background:  url(images/logo-bw.png) no-repeat center ;
-	 
+	text-align: left;    	
+	font-weight: bold;	
+	background:  url(images/logo-bw.png) no-repeat center ;	 
 	background-image: url("images/cakes_home/baking-fade.jpg");
 	background-size: cover; background-position: 50% 50%; background-repeat: no-repeat; 
-	background-attachment: scroll; 		
-	
-	box-shadow: 1px 1px 5px 1px #867979;
-	
+	background-attachment: scroll;	
+	box-shadow: 1px 1px 1px 1px #867979;	
 	font-family:'Helvetica', cursive;
 	font-size: 20px;
-    font-weight:50px;
+    font-weight:100px;
     color: #540808;
-	
-
     width: 90%;
-
     align-items: center;   
     padding:2% 10% 2%;
-    
-
 }
 
-.about img{
+.about img{  /* Best selling cakes - images below about us text cards*/
     max-width:100%;
     max-height:100%;
     width: 250px;
     height: 200px;
-
 }
 
 .about img:hover{
@@ -318,121 +354,75 @@ form button{
 }
 
 
-.about-p{
+.about-p{  /* Color for about us text*/
     color: black;
 }
-
-
-
-.about-text-outer{
-	background: white;
-	font-family:'Dancing Script', cursive;
-    font-weight:900;
-    color: #540808;
-	
-}
-
-.about{
-    padding-bottom: 20px;
-}
-
-
 
 /* CSS About : END */
 
 /* CSS Birthday Cakes Order Form - START */
-
-
-
-#cart{
-	font-size: 8px;
+#cart{  /* card value */
+	font-size: 7px;
 	font-weight: italic;
-	color: green;
+	color: black;
 	text-align: center;
-	padding-bottom: 100px;
 }
 
-.order-form-area{
-	 
+.order-form-area{	 
 	border: 2px solid;
-
-	//border-radius: 10px;
-		margin-left: 100px;
+    border-radius: 10px;
+	margin-left: 50px;
 	margin-right: 50px;
-
 	text-align: left;    
 	font-family: "Arial", sans-serif;
 	font-size: 20px;
 	color: white;
-	font-weight: bold;
-	
-	
-	
-	background:  url(images/c2-fade1.jpg) no-repeat center ;	 
+	font-weight: bold;	
+	background:  url(images/c2-fade.jpg) no-repeat center ;	 
 	background: white;
 	background-size: cover; background-position: 50% 50%; background-repeat: no-repeat; 
-	background-attachment: scroll; 	
-	
-	//opacity: 80%;
+	background-attachment: scroll; 		
+	opacity: 80%;
 	box-shadow: 1px 1px 5px 2px #867979;	 
-
 }
 
 .order-calc{
-	padding: 50px;
+	padding: 20px;
 	border: 0px solid;
 	border-radius: 10px;
-
 	text-align: left;    
 	font-family: "Arial", sans-serif;
 	font-size: 14px;
 	color: black;
 	font-weight: bold;
-	width: 400px;;
-	height: 550px;
-	
-	
+	width: 350px;
+	height: 550px;	
 	background-color: white;
 	background-size: cover; background-position: 70% 70%; background-repeat: no-repeat; 
 	background-attachment: scroll; 	
 
-	
-	
-
 }
-.order-calc-box{
-	
+.order-calc-box{	
 	border-radius: 5px;
 	border: 0px solid;
 	font-weight: bold;
-
+    display: flex;
 	color: #002366;
 	background-color: #ffe4e1;
 }
 
 .total-price{
-	color: green;
-	font-weight: bold;
-	
+	color: black;
+	font-weight: bold;	
 }
 
-.calc-birtdayCakeimage{
-	border: 1px solid;
-	     display: flex;
-        flex-wrap: wrap;
-        width: 100%;
-        max-width: 800px;
-       height: 500px;
-        margin: auto;
-		box-shadow: 1px 1px 5px 2px #867979;	 
-}
+
 
 .calc{
 	padding-top: 0px;	
 	border: 1px solid;
 	border-color: #f5f4f4;
-	box-shadow: 1px 1px 5px 2px #f5f4f4;
-	
+	box-shadow: 1px 1px 5px 2px #f5f4f4;	
 	margin: 10px solid;
 	text-align: left;
 	color: black;
@@ -441,41 +431,28 @@ form button{
 	
 }
 
-.orderA{
-	        display: flex;
-        flex-wrap: wrap;
-        width: 100%;
-        max-width: 1000px;
-        position: center;
-        margin: auto;
-}
 
 .flexBoxContainer {
-  display: flex; 
-  background-color: none;
- max-width: 1000px;
-
-
+    display: flex; 	
+    background-color: none;
+    max-width: 1000px;
 }
 
 .flexbox{
 	display: space-between;
-
 	background-color: white;
 	border-radius: 5px solid;
 	margin-left: 10px;
 	text-align: center;
 	line-height: 75px;
-	box-shadow: 1px 5px 1px 2px #867979;
+	box-shadow: 1px 1px 1px 1px #867979;
 
 }
 
 
-
 /* Button */
 .button {
-  background-color: black; /* Green */
-  
+  background-color: black;   
   border: 0px solid;
   border-radius: 5%;   
   text-align: center;
@@ -487,6 +464,22 @@ form button{
   font-size: 150%;
   font-weight:  bold;
   color: red;
+  
+}
+
+.add2CartButton{	/* Add to cart button colors */
+	color: black;
+	font-weight:  bold;
+	border-color: #F4B498;
+	background-color:#F4B498;	
+}
+
+.add2CartButton:hover{	 /* Add to cart button colors change on mouse hover*/
+	
+	color: black;
+	border-color: #E08746;
+	background-color:#E08746;
+	
 }
 
 /*CSS - Birthday - END */
@@ -494,11 +487,10 @@ form button{
 /* Login Form CSS - Start */
 #LoginId{
 	display: space-between;
-	font-size: 8px;
+	font-size: 7px;
 	font-weight: italic;
 	color: purple;
-	text-align: center;
-	padding-bottom: 100px;
+	text-align: center;	
 	text-transform: lowercase;
 	
 }
@@ -518,7 +510,7 @@ form button{
 	max-width: 800px;
 	height: 600px;	
 	
-	background:  url(images/c2-fade.jpg) no-repeat center ;	 
+	background-image: url("images/cakes_home/baking-fade.jpg");
 	background-size: cover; background-position: 50% 50%; background-repeat: no-repeat; 
 	background-attachment: fixed; 	
 	
@@ -543,6 +535,8 @@ form button{
 	font-weight: bold;
 	background-color: white;
 	
+	box-shadow: 1px 1px 1px 1px #867979;
+	
 	
 	
 }
@@ -559,9 +553,14 @@ form button{
 	box-shadow: 1px 1px 1px 2px #867979;
 }
 
-
+#loginFail{
+	color: red;
+	font-size:20px;
+}
 
 /* Login Form CSS - End */
+
+/* Author2: Jayasri - END*/
 
 
 

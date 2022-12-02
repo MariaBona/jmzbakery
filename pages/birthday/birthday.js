@@ -17,30 +17,31 @@ extras = {
 'candle': 3
 };
 
-
+//Default value for username when page loads
 localStorage.setItem("userName","John");
 var userName = localStorage.getItem("userName"); 
-var total = 0;
-var prevTotal = 0;
+var total = 0;  //total cost of the cake
+var prevTotal = 0;  //previous value in cart
 
-/* JQuery - javascript to invoke calculate function */
+/* JQuery - javascript to invoke calculate cake cost - this function is called whenever input is selected, radio button checked  */
 $( document ).ready(function() {
-	calculate();
+	calculate();  // calculate value on page load
+	/* call  calculate () whenever input is selected, radio button checked in the order-calc area */
 	$('.order-calc input, .order-calc select').on('change keyup', function(e) {
 		calculate();
 	});
 });
 
 
-
+//cart value on navbar is written - cart is identified by id =cart"
 document.getElementById('cart').innerHTML="0 \(€\)" ;	
+//Login value on navbar is written - Login is identified by id =LoginId"
 document.getElementById('LoginId').innerHTML = userName;
 
-function calculate() {	 
-	
-
-	document.getElementById('LoginId').innerHTML = userName ;
+function calculate() {	 		
 	 
+	 /* reads form values based on their ids  (shape, size, message, candle) *
+	 /* ex: shape value identified using id=shape*/
 	 let shape = $('#shape').val();
 	 let size = $('#size').val();
 	 let isMessageA = document.getElementsByName('isMessage');
@@ -50,7 +51,7 @@ function calculate() {
 	 let candlePrice=extras.candle;
 	 total=priceList[size];  // Get value from Price array for a given size	
 	 
-	 //Loop through radiobutton status to get which one is checked
+	 //Loop through radiobutton status to get which one is checked  - for message/name and candle
 	 for(i = 0; i < isMessageA.length; i++) {
                 if(isMessageA[i].checked)
                 isMessage = isMessageA[i].value;
@@ -58,28 +59,18 @@ function calculate() {
                 isCandle = isCandleA[i].value;
 	}
 	 
-	 
+	 /* when message required is checked price is increased by messagePrice */
 	 if( isMessage == "Yes" ){		 
 		total += messagePrice;	 
 	 }
 
-	 
+	 /* when candle required is checked price is increased by messagePrice */
 	 if (isCandle == "Yes"){
 		 total += messagePrice;
 	 }
 	 
-	 
-	$('#price').val(total);  
-	
-
-	//Get user Id from the local storage - a global variable used across the website
-	//document.getElementById('userId').innerHTML += "Login";
-	
-	//document.getElementById('cart').innerHTML = ("€"+prevTotal) ;
-	
-	//alert("Total cost of this Item: "+ total + "\nCost in car so far: "+prevTotal);
-	
-	
+	 /* fills the form for Total Price  - identified by id=price*/
+	$('#price').val(total);  	
 	
 }
 
@@ -88,6 +79,7 @@ function add2Cart(e){
 
 			//Add total price of cake to previously added items in the cart
 			prevTotal += total;
+			// updates navbar cart value for id=cart
 			document.getElementById('cart').innerHTML = ("€"+prevTotal) ;
 			alert("Item is successfully added to cart! \n Cost of Item: €"+ total );
 			

@@ -66,3 +66,21 @@ function showSlides(n) {
 document.getElementById('cart').innerHTML="0 \(€\)" ;	
 
 
+//navbar sticky. Code from W3Schools
+
+window.onscroll = function() {myFunction()}; //function below is executed when user scrolls
+
+var navbar = document.getElementById("navbar"); //getter for navbar
+var sticky = navbar.offsetTop; //offset position of navbar
+
+//function
+function myFunction() {
+  //offset position is reached =>sticky class of navbar is added (characteristics are in css file)
+  if (window.pageYOffset >= sticky) { 
+    navbar.classList.add("sticky")
+  } else { //else if offset not reached, stycky class is removed from navbar
+    navbar.classList.remove("sticky");
+  }
+}
+
+

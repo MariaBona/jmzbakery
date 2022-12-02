@@ -4,7 +4,7 @@
 <html>
   <head>
 
-    <title>Home page</title>
+    <title>Birthday cakes</title>
 
     <!-- Embedding font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -45,98 +45,93 @@
     <script>
       const toTop = () => window.scrollTo({top:0,behavior:'smooth'});
     </script>
-
-    <div class="container-fluid">
 	
 	
-      <div class="row separator_blank">
+	<div id="navbar" class="row separator_blank sticky">
 
-        <!-- Nav Bar -->
-        <div class="col-sm-3 col-lg-12">
-          <nav class="navbar navbar-expand-lg">
-            <div class="container">
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-              <ul class="navbar-nav ml-auto ">
-                <li class="nav-item">
-                  <a class="nav-link" aria-current="page" href="../../index.html">Home</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="../about/about.html">About Us</a>
-                </li>
-                <li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle"  href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" > Our Products </a>
-                  <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="#">Birthday Cakes</a> </li>
-                    <li><a class="dropdown-item" href="../Wedding cakes/Wedding_cakes.html">Wedding Cakes</a> </li>
-                    <li><a class="dropdown-item" href="#">Seasonal Cakes</a> </li>
-                    <li> <a class="dropdown-item" href="#">Sweet Boxes</a> </li>
-                  </ul>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="../contact/contact.html">Contact Us</a>
-                </li>
-				<li class="nav-item ">                  
-				  <a class="nav-link material-symbols-outlined" href="../login/login.html" id="login-icon"><div>person</div><div><span id="LoginId"></span></div></a>	
-				  <a class="nav-link material-symbols-outlined" href="#"  id="cart-icon"><div>shopping_cart</div><div><span id="cart"></span></div></a>	
-                </li>
-              </ul>
-            </div>
-            </div>
-          </nav>
-        </div>   
-
-      </div>
-
-      
-
-      <div class="row top"></div> 
-
-        <div class="row logo-div">
-          <div>
-            <a href="index.html"> <img alt="Bakery logo" id="logo" src="../../images/Logo-bg.png">  </a> <!-- Putting logo in its own div so the clickable area is limited to logo and not entire row -->
-          </div>
-        </div>
-
-	  
-		<div class="row about">
-
-			<h1>We make your special day more awesome</h1>				
-
-			<div class="col-lg-3 col-md-3 col-sm-5 card-div">				
-				<a href="#" class="btn card-img"><img src="../../images/birthday_cakes/fruits.jpg" alt=""></a>		
-			</div>
-			<div class="col-lg-3 col-md-3 col-sm-5 card-div">
-				<a href="#" class="btn card-img"><img src="../../images/birthday_cakes/red-love.jpg" alt=""></a>
-			</div>
-			<div class="col-lg-3 col-md-3 col-sm-5 card-div">
-				<a href="#" class="btn card-img"><img src="../../images/birthday_cakes/white-gems.jpg" alt=""></a>
-			</div>
-			<div class="col-lg-3 col-md-3 col-sm-5 card-div">
-				<a href="#" class="btn card-img"><img src="../../images/birthday_cakes/choc.jpg" alt=""></a>
-			</div>
-		</div>
-
-	  
-		<!-- Jayasri: Birthday Cakes Area  - START -->
-	  <div class = " row d-flex  justify-content-center  middle pt-5 " >
-			<h1 >Order your favourite cake today</h1>	
-      <br/>
-			<div class=" flexBoxContainer ">
-				<div class="flexbox">
-					<p><img alt="picture of chocolate cake"  src="../../images/birthday_cakes/choc-hbd2.jpg" width="600px" height="600px"></p>
+		<!-- Nav Bar -->
+		<div class="col-sm-3 col-lg-12">
+			<nav class="navbar navbar-expand-lg">
+				<div class="container">
+					<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+					</button>
+				<div class="collapse navbar-collapse" id="navbarSupportedContent">
+					<ul class="navbar-nav ml-auto ">
+						<li class="nav-item">
+							<a class="nav-link" aria-current="page" href="../../index.html">Home</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="../about/about.html">About Us</a>
+						</li>
+						<li class="nav-item dropdown">
+							<a class="nav-link dropdown-toggle active" aria-current="page" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" > Our Products </a>
+							<ul class="dropdown-menu">
+								<li><a class="dropdown-item" href="#">Birthday Cakes</a> </li>
+								<li><a class="dropdown-item" href="../Wedding cakes/Wedding_cakes.html">Wedding Cakes</a> </li>
+								<li><a class="dropdown-item" href="../occasion cakes/occasional.html">Seasonal Cakes</a> </li>
+							</ul>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="../contact/contact.html">Contact Us</a>
+						</li>
+						<li class="nav-item ">                  
+							<a class="nav-link material-symbols-outlined" href="../login/login.html" id="login-icon"><div>person</div><div><span id="LoginId"></span></div></a>	
+							<a class="nav-link material-symbols-outlined" href="#"  id="cart-icon"><div>shopping_cart</div><div><span id="cart"></span></div></a>	
+						</li>
+					</ul>
 				</div>
-				<div class="row   order-form-area">      
-	
-			
-			
+				</div>
+			</nav>
+		</div>   
+
+	</div> <!--Row separator with navbar end-->
+
+
+	<div class="row top"></div> 
+
+	<div class="row logo-div">
+		<div>
+			<a href="index.html"> <img alt="Bakery logo" id="logo" src="../../images/Logo-bg.png">  </a> <!-- Putting logo in its own div so the clickable area is limited to logo and not entire row -->
+		</div>
+	</div>
+
+
+	<div class="row about">
+
+		<h1>We make your special day more awesome</h1>				
+
+		<div class="col-lg-3 col-md-3 col-sm-5 card-div">				
+			<a href="#" class="btn card-img"><img src="../../images/birthday_cakes/fruits.jpg" alt=""></a>		
+		</div>
+		<div class="col-lg-3 col-md-3 col-sm-5 card-div">
+			<a href="#" class="btn card-img"><img src="../../images/birthday_cakes/red-love.jpg" alt=""></a>
+		</div>
+		<div class="col-lg-3 col-md-3 col-sm-5 card-div">
+			<a href="#" class="btn card-img"><img src="../../images/birthday_cakes/white-gems.jpg" alt=""></a>
+		</div>
+		<div class="col-lg-3 col-md-3 col-sm-5 card-div">
+			<a href="#" class="btn card-img"><img src="../../images/birthday_cakes/choc.jpg" alt=""></a>
+		</div>
+	</div> <!--about div end-->
+
+	  
+      <!-- Jayasri: Birthday Cakes Area  - START -->
+	<div class = " row d-flex  justify-content-center pt-5 " >
+		<h1 >Order your favourite cake today</h1>	
+		<br/>
+		<div class=" flexBoxContainer ">
+			<div class="flexbox">
+			<p><img alt="picture of chocolate cake"  src="../../images/birthday_cakes/choc-hbd2.jpg" width="600px" height="600px"></p>
+			</div>
+			<div class="row   order-form-area">      
+
 			<div class=" flexBoxContainer " >				
-				
+
 				<form class="order-calc" >
 
 					<br/><br/>
+				<!-- Cake size selection box -->	  
 					<label for="size">Size</label>
 					<select required name="size" id="size" class="form-control box-shadow order-calc-box ">
 						<option value="0">6" (Serves max.8 persons)</option>
@@ -144,132 +139,125 @@
 						<option value="2">10" (Serves Max. 20 persons) + €20</option>
 						<option value="3">12" (Serves Max. 30 persons) + €40</option>
 					</select>
-					
 
 
+				<!-- Radio buttons for Is message, name required -->	  
 					<br/>
-						<p>Message, Name required? (+€3) </p>
-						<span>
-							<input type="radio" id="isMessageYes" name="isMessage" value="Yes" >
-							<label for="isMessageYes">Yes</label>					
-							<input type="radio" id="isMessageNo" name="isMessage" value="No" checked>
-							<label for="isMessageNo">No</label>
-							
-						</span>
-						<input  type="text" class="form-control box-shadow order-calc-box" id="message" placeholder="e.g: Happy Birthday Jaya" >
+					<p>Message, Name required? (+€3) </p>
+					<span>
+						<input type="radio" id="isMessageYes" name="isMessage" value="Yes" >
+						<label for="isMessageYes">Yes</label>
+						<!--By default NO is selected -->				
+						<input type="radio" id="isMessageNo" name="isMessage" value="No" checked>
+						<label for="isMessageNo">No</label>
+
+					</span>
+					<input  type="text" class="form-control box-shadow order-calc-box" id="message" placeholder="e.g: Happy Birthday Jaya" >
 					</br>
-					
-					
+
+					<!-- Radio buttons for Is candle required -->	  
 					<p>Candle required? (+€3) </p>
-						<span>
-							<input type="radio" id="isCandleYes" name="isCandle" value="Yes">
-							<label for="isCandleYes">Yes</label>
-							<input type="radio" id="isCandleNo" name="isCandle" value="No" checked>
-							<label for="isCandleNo">No</label>
-						</span>
+					<span>
+						<input type="radio" id="isCandleYes" name="isCandle" value="Yes">
+						<label for="isCandleYes">Yes</label>
+						<!--By default NO is selected -->
+						<input type="radio" id="isCandleNo" name="isCandle" value="No" checked>
+						<label for="isCandleNo">No</label>
+					</span>
 					<br>
-					
+
+					<!-- Radio buttons shape selection -->
 					<br/>
 					<p>Shape</p>
-						<input type="radio" id="shape" name="shape" value="Circle" checked>
-						<label for="shape">Round</label>
-						<input type="radio" id="shape" name="shape" value="Rectangle">
-						<label for="shape">Rectangle</label>					
-						<input type="radio" id="shape" name="shape" value="Square">
-						<label for="shape">Square</label>
-					
-					
-					
-					
+					<!--By default circle shape is selected -->
+					<input type="radio" id="shape" name="shape" value="Circle" checked>
+					<label for="shape">Round</label>
+					<input type="radio" id="shape" name="shape" value="Rectangle">
+					<label for="shape">Rectangle</label>					
+					<input type="radio" id="shape" name="shape" value="Square">
+					<label for="shape">Square</label>
+
+
+
+					<!-- Non-editable Text box area for showing total price - contains numbers  -->
 					<br/><br/>
 					<label for="price" class="total-price">TOTAL PRICE (€):  </label>
 					<input readonly type="number" min="0" step="any" name="price" class="form-control box-shadow order-calc-box" id="price" placeholder="Price (€)">
-					
+
 					<br/><br/> <br/>
 
 				</form>
-				
-			
+
 			</div>
-			
- 
-			<button type="submit" id="add2Cart" class="btn btn-success"  onClick="add2Cart()">Add To Cart</button>
-		</div>
-		
-		
-			
 
-		</div>
-		 <div class="row about">
-				<div class="row separator_blank"></div>
-				<div class="row separator_blank"></div>
-				<h1>Best Selling Cakes</h1>
-				
+			<button type="submit" id="add2Cart" class="btn btn-success add2CartButton"  onClick="add2Cart()">Add To Cart</button>
 
-				<div class="col-lg-3 col-md-3 col-sm-5 card-div">
-				  <a href="#" class="btn card-img"><img src="../../images/cakes_home/Wedding1.jpg" alt=""></a>
-				</div>
-				
-				<div class="col-lg-3 col-md-3 col-sm-5 card-div">
-				  <a href="#" class="btn card-img"><img src="../../images/cakes_home/baby_1st_birthday.jpg" alt=""></a>
-				</div>
-				
-				  <div class="col-lg-3 col-md-3 col-sm-5 card-div">
-				  <a href="#" class="btn card-img"><img src="../../images/cakes_home/season1.jpg" alt=""></a>
-				</div>
-				<div class="col-lg-3 col-md-3 col-sm-5 card-div">
-				  <a href="#" class="btn card-img"><img src="../../images/cakes_home/front-view-sweet-chocolate-cake.jpg" alt=""></a>
-				</div>
-				
+			</div><!--order form area end-->
 
-			  </div> <!-- div end-->
-	</div>
-	<!-- Jayasri: Birthday Cakes Area  - END -->
+		</div> <!--flexbox container first end-->
+
+		<div class="row about">
+			<div class="row separator_blank"></div>
+			<div class="row separator_blank"></div>
+			<h1>Best Selling Cakes</h1>
+
+
+			<div class="col-lg-3 col-md-3 col-sm-5 card-div">
+				<a href="#" class="btn card-img"><img src="../../images/cakes_home/Wedding1.jpg" alt=""></a>
+			</div>
+
+			<div class="col-lg-3 col-md-3 col-sm-5 card-div">
+				<a href="#" class="btn card-img"><img src="../../images/cakes_home/baby_1st_birthday.jpg" alt=""></a>
+			</div>
+
+			<div class="col-lg-3 col-md-3 col-sm-5 card-div">
+				<a href="#" class="btn card-img"><img src="../../images/cakes_home/season1.jpg" alt=""></a>
+			</div>
+			<div class="col-lg-3 col-md-3 col-sm-5 card-div">
+				<a href="#" class="btn card-img"><img src="../../images/cakes_home/front-view-sweet-chocolate-cake.jpg" alt=""></a>
+			</div>
+		</div> <!-- About div end-->
+
+	</div> <!--Middle div end-->
+
+    <!-- Jayasri: Birthday Cakes Area  - END -->
 	  
-<div class="row separator_blank"></div>
-	  
+	<div class="row separator_blank"></div>
 
-
-
-
-      <div class="row separator_blank"></div>
+	<div class="row separator_blank"></div>
 
       
 
-      <!-- Footer -->
+     <!-- Footer -->
 
-      <div class="row footer d-flex">
-        <div class="col-lg-12 col-sm-5">
-          <p>@2022 - J.M.Z.Bakery. All Right Reserved</p>
-          <br>
+	<div class="row footer d-flex">
+		<div class="col-lg-12 col-sm-5">
+		  <p>@2022 - J.M.Z.Bakery. All Right Reserved</p>
+		  <br>
 
-          <div class="row d-flex justify-content-evenly">
-          <div class="col-lg-4 cl-md-2 p-4 mb-5 me-3">
-            <p>Let our passion for creating beautiful and unique cakes bring you and your loved ones together for a sweet celebration </p>
-            <img class="icon-style mb-2 mt-2"  src="../../images/phone-call.png"> 
-            <h6> Call us today on 0831603826</h2>
-          </div>
+		  <div class="row d-flex justify-content-evenly">
+		  <div class="col-lg-4 cl-md-2 p-4 mb-5 me-3">
+			<img class="icon-style mb-2 mt-2"  src="../../images/phone-call.png"> 
+			<h6> Call us today on 0831603826</h2>
+		  </div>
 
-          <div class="col-lg-2 cl-md-2 float-end p-4 mb-5 me-3" > 
-            <p>Follow us on Social Media</p>
-            <div class="d-flex justify-content-evenly">
-              <a href="https://www.facebook.com/"> <img class="social" src="../../images/facebook (1).png" alt="facebook logo"></a>
-              <a href="https://www.instagram.com/"><img class="social" src="../../images/instagram.png" alt="instagram logo"></a>
-            </div>
-          </div>
-        </div>
+		  <div class="col-lg-2 cl-md-2 float-end p-4 mb-5 me-3" > 
+			<p>Follow us on Social Media</p>
+			<div class="d-flex justify-content-evenly">
+			  <a href="https://www.facebook.com/"> <img class="social" src="../../images/facebook (1).png" alt="facebook logo"></a>
+			  <a href="https://www.instagram.com/"><img class="social" src="../../images/instagram.png" alt="instagram logo"></a>
+			</div>
+		  </div>
+		</div>
 
-        </div>
+		</div>
 
-        <div>
-          <button class="toTop" onclick="toTop()"> back to top</button> 
-        </div>
+	<div>
+	  <button class="toTop" onclick="toTop()"> back to top</button> 
+	</div>
 
-      </div> <!--Fotter div end-->
+	</div> <!--Footer div end-->
 
-    </div>
-
-
-<script src="birthday.js"></script>
+    <script src="birthday.js"></script>
   </body>
 </html>

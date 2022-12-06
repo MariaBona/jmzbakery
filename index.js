@@ -59,9 +59,9 @@ function showSlides(n) {
   
  
  
+  
  // Default values for Login ID 
- localStorage.setItem("userName","John");   //local storage variable used to store a default value on website first loading - index.html
- document.getElementById('LoginId').innerHTML = localStorage.getItem("userName");
+ document.getElementById('LoginId').innerHTML = "John";
 // Default values for Cart Value
 document.getElementById('cart').innerHTML="0 \(€\)" ;	
 
@@ -82,5 +82,11 @@ function myFunction() {
     navbar.classList.remove("sticky");
   }
 }
+
+
+    
+// Scroll back to top function: copied from https://dev.to/prnvbirajdar/react-hooks-component-to-smooth-scroll-to-the-top-35fd 
+  const toTop = () => window.scrollTo({top:0,behavior:'smooth'});
+
 
 

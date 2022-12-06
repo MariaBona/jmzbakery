@@ -1,62 +1,42 @@
 //Author: Jayasri Kusuma
 
-//Different Sizes - Codes and Descriptions
-sizes ={
-	'0':"6\" (Serves max.8 persons)",
-	'1':"8\" (Serves max.12 persons) + €10",
-	'2':"12\" (Serves max.20 persons) + €20",
-	'3':"18\" (Serves max.30 persons) + €40"
-};	
 
-// Price based on the size - in the order of size listed in the UI
-priceList = [ 30, 40, 50, 70 ];
-
-// Additional Price information
-extras = {
-'message': 3,
-'candle': 3
-};
-
-//Default value for username when page loads
-localStorage.setItem("userName","John");
-var userName = localStorage.getItem("userName"); 
+priceList = [ 30, 40, 50, 70 ]; // Price based on the size - in the order of size listed in the UI
+var messagePrice=1; // price for message
+var candlePrice=3;  // price for Candle
 var total = 0;  //total cost of the cake
 var prevTotal = 0;  //previous value in cart
+var userName = "John"; //Default value for username when page loads
 
 /* JQuery - javascript to invoke calculate cake cost - this function is called whenever input is selected, radio button checked  */
 $( document ).ready(function() {
-	calculate();  // calculate value on page load
+	calculate();  // calculate total value on page load
 	/* call  calculate () whenever input is selected, radio button checked in the order-calc area */
 	$('.order-calc input, .order-calc select').on('change keyup', function(e) {
 		calculate();
 	});
 });
 
-
-//cart value on navbar is written - cart is identified by id =cart"
-document.getElementById('cart').innerHTML="0 \(€\)" ;	
-//Login value on navbar is written - Login is identified by id =LoginId"
-document.getElementById('LoginId').innerHTML = userName;
+document.getElementById('cart').innerHTML="0 \(€\)" ;	 //cart value on navbar is written - cart is identified by id =cart"
+document.getElementById('LoginId').innerHTML = userName; //Login value on navbar is written - Login is identified by id =LoginId"
 
 function calculate() {	 		
 	 
-	 /* reads form values based on their ids  (shape, size, message, candle) *
-	 /* ex: shape value identified using id=shape*/
-	 let shape = $('#shape').val();
-	 let size = $('#size').val();
-	 let isMessageA = document.getElementsByName('isMessage');
-	 let message = $('#message').val();
-	 let isCandleA = document.getElementsByName('isCandle');
-	 let messagePrice=extras.message;
-	 let candlePrice=extras.candle;
-	 total=priceList[size];  // Get value from Price array for a given size	
+	 /* reads form values based on their ids  (size, message, candle) */	 
+	 let size = $('#size').val();	 //size value identified using id=size
+	 let isMessageA = document.getElementsByName('isMessage'); //Get radio button values for Message needed	 
+	 let isCandleA = document.getElementsByName('isCandle'); //Get radio button values for Candle needed
+	 
+	 total=priceList[size];  // For a given "size", get price value from Price array
 	 
 	 //Loop through radiobutton status to get which one is checked  - for message/name and candle
 	 for(i = 0; i < isMessageA.length; i++) {
-                if(isMessageA[i].checked)
-                isMessage = isMessageA[i].value;
-				if(isCandleA[i].checked)
-                isCandle = isCandleA[i].value;
+                if(isMessageA[i].checked){
+					isMessage = isMessageA[i].value;
+				}
+				if(isCandleA[i].checked){
+					isCandle = isCandleA[i].value;
+				}
 	}
 	 
 	 /* when message required is checked price is increased by messagePrice */
@@ -64,9 +44,9 @@ function calculate() {
 		total += messagePrice;	 
 	 }
 
-	 /* when candle required is checked price is increased by messagePrice */
+	 /* when candle required is checked price is increased by candlePrice */
 	 if (isCandle == "Yes"){
-		 total += messagePrice;
+		 total += candlePrice;
 	 }
 	 
 	 /* fills the form for Total Price  - identified by id=price*/
@@ -75,14 +55,10 @@ function calculate() {
 }
 
 // ------   Add to Cart
-function add2Cart(e){
-
-			//Add total price of cake to previously added items in the cart
-			prevTotal += total;
-			// updates navbar cart value for id=cart
-			document.getElementById('cart').innerHTML = ("€"+prevTotal) ;
-			alert("Item is successfully added to cart! \n Cost of Item: €"+ total );
-			
+function add2Cart(e){			
+			prevTotal += total; //Add total price of cake to previously added items in the cart			
+			document.getElementById('cart').innerHTML = ("€"+prevTotal) ; // updates  cart value on navbar for id=cart			
+			alert("Item is successfully added to cart! \n Cost of Item: €"+ total ); 			
 
 }
 

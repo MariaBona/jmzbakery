@@ -3,6 +3,7 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <title>Contact us page</title>
 
     <!-- Embedding font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -31,7 +32,6 @@
       crossorigin="anonymous"></script>
 
   </head>
-
   <body>
     <!--Facebook JavaScript SDK ref  Meta for Developers-->
     <div id="fb-root"></div>
@@ -42,65 +42,61 @@
       const toTop = () => window.scrollTo({top:0,behavior:'smooth'});
     </script>
 
-    <div class="row separator_blank">
-      <!-- Nav Bar -->
-
-      <div class="col-sm-3 col-lg-12">
-        <nav class="navbar navbar-expand-lg">
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent"
-            aria-expanded="false"
-            aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav ml-auto ">
-              <li class="nav-item">
-                <a class="nav-link" aria-current="page" href="../../index.html">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="../about/about.html">About Us</a>
-              </li>
-              <li class="nav-item dropdown">
-                <a
-                  class="nav-link dropdown-toggle"
-                  href="#"
-                  role="button"
-                  data-bs-toggle="dropdown"
-                  aria-expanded="false" >
-                  Our Products
-                </a>
-                <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="../../pages/birthday/birthday.html">Birthday Cakes</a> </li>
-                  <li><a class="dropdown-item" href="../../pages/Wedding cakes/Wedding_cakes.html">Wedding Cakes</a> </li>
-                  <li><a class="dropdown-item" href="#">Seasonal Cakes</a> </li>
-                  <li><a class="dropdown-item" href="#">Sweet Boxes</a></li>
-                </ul>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="contact.html">Contact Us</a>
-              </li>
-              <li class="nav-item ">                  
-        <a class="nav-link material-symbols-outlined" href="../login/login.html" id="login-icon"><div>person</div><div><span id="LoginId" ></span></div></a>	
-        <a class="nav-link material-symbols-outlined" href="#"  id="cart-icon"><div>shopping_cart</div><div><span id="cart"></span></div></a>
-              </li>
-            </ul>
-          </div>
-        </nav>
-      </div> 
-    </div>
-
     <div class="container-fluid">
-      <div class="row top">
-        <!-- <div class="col-sm-5 col-lg-5 logo-div">
-          <a href="#"> <img alt="Bakery logo" id="logo" src="images/Logo-bg.png">  </a>
-        </div>
-        -->
+
+      <div id="navbar" class=" row sticky">
+        <!-- Nav Bar -->
+
+        <div class="col-sm-3 col-lg-12">
+          <nav class="navbar navbar-expand-lg">
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent"
+              aria-expanded="false"
+              aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav ml-auto ">
+                <li class="nav-item">
+                  <a class="nav-link"  href="../../index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../about/about.html">About Us</a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a
+                    class="nav-link dropdown-toggle"
+                    href="#"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false" >
+                    Our Products
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="../birthday/birthday.html">Birthday Cakes</a> </li>
+                    <li><a class="dropdown-item" href="../Wedding cakes/Wedding_cakes.html">Wedding Cakes</a> </li>
+                    <li><a class="dropdown-item" href="../occasion cakes/occasional.html">Seasonal Cakes</a> </li>
+                  </ul>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="contact.html">Contact Us</a>
+                </li>
+                <li class="nav-item ">                  
+                <a class="nav-link material-symbols-outlined" href="../login/login.html" id="login-icon"><div>person</div><div><span id="LoginId" ></span></div></a>	
+                <a class="nav-link material-symbols-outlined" href="#"  id="cart-icon"><div>shopping_cart</div><div><span id="cart"></span></div></a>
+                </li>
+              </ul>
+            </div>
+          </nav>
+        </div> 
       </div>
+
+
+      <div class="row top"></div>
 
       <div class="row logo-div">
         <div>
@@ -167,23 +163,20 @@
         <p></p>
       </div>
         
-      
-
-
       <!-- Footer -->
 
       <div class="row footer d-flex">
-        <div class="col-lg-12 col-sm-5">
+        <div class="col-lg-12 col-md-12 col-sm-5">
           <p>@2022 - J.M.Z.Bakery. All Right Reserved</p>
           <br>
 
           <div class="row d-flex justify-content-evenly">
           <div class="col-lg-4 cl-md-2 p-4 mb-5 me-3">
             <img class="icon-style mb-2 mt-2"  src="../../images/phone-call.png"> 
-            <h6> Call us now on 0831603826</h2>
+            <h6> Call us today on 0831603826</h2>
           </div>
 
-          <div class="col-lg-2 cl-md-2 float-end p-4 mb-5 me-3" > 
+          <div class="col-lg-2 col-md-3 float-end mb-5 p-4 me-3" > 
             <p>Follow us on Social Media</p>
             <div class="d-flex justify-content-evenly">
               <a href="https://www.facebook.com/"> <img class="social" src="../../images/facebook (1).png" alt="facebook logo"></a>
@@ -192,13 +185,15 @@
           </div>
         </div>
 
-        </div>
-
         <div>
           <button class="toTop" onclick="toTop()"> back to top</button> 
         </div>
 
-      </div>
+        </div>
+
+      </div> <!--Footer div end-->
+    </div><!--Container fluid div end-->
+
       <script src="https://smtpjs.com/v3/smtp.js"></script>
       <script>
         function checkResponse(message) {

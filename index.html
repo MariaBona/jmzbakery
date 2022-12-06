@@ -6,6 +6,8 @@
 
     <title>Home page</title>
 
+    <link rel="icon" type="favicon" href="favicon.ico">
+
     <!-- Embedding font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -21,31 +23,19 @@
       crossorigin="anonymous"/>
 	  
 	 
-	<!-- Google Symbols  for Login and Cart -->
-	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <!-- Google Symbols  for Login and Cart -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 
+    <!--Stylesheet-->
     <link rel="stylesheet" href="style.css" />
-
-    <!-- Bootstrap scripts for JavaScript -->
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
-      crossorigin="anonymous">
-    </script>
 
   </head>
 
   <body>
 
-    <!-- Internal JavaScript: scroll back to top function: copied from https://dev.to/prnvbirajdar/react-hooks-component-to-smooth-scroll-to-the-top-35fd -->
-    <script>
-      const toTop = () => window.scrollTo({top:0,behavior:'smooth'});
-    </script>
-
     <div class="container-fluid">
-
    
-      <div id="navbar" class="row separator_blank sticky"> <!--added id and class to this div to create sticky navbar feature-->
+      <div id="navbar" class="row sticky"> <!--added id and class to this div to create sticky navbar feature-->
 
         <!-- Nav Bar -->
         <div class="col-sm-3 col-lg-12">
@@ -67,8 +57,7 @@
                   <ul class="dropdown-menu">
                     <li><a class="dropdown-item" href="pages/birthday/birthday.html">Birthday Cakes</a> </li>
                     <li><a class="dropdown-item" href="pages/Wedding cakes/Wedding_cakes.html">Wedding Cakes</a> </li>
-                    <li><a class="dropdown-item" href="pages/occasion cakes/Seasonal Cakes.html">Seasonal Cakes</a> </li>
-                    <li> <a class="dropdown-item" href="#">Sweet Boxes</a> </li>
+                    <li><a class="dropdown-item" href="pages/occasion cakes/occasional.html">Seasonal Cakes</a> </li>
                   </ul>
                 </li>
                 <li class="nav-item">
@@ -82,9 +71,9 @@
             </div>
             </div>
           </nav>
-        </div>   
+        </div>   <!--Navbar end-->
 
-      </div>
+      </div> <!--Navbar container div end-->
 
       
 
@@ -97,31 +86,31 @@
         </div>
 
 
-       <!-- Middle section and slideshow -->
+    <!-- Middle section and slideshow -->
 
        <div class="row tagline pb-3">
         <h1>Every flavor has a story...</h1>
        </div>
 
-      <div class="slideshow middle col-sm-5 col-lg-12">
+      <div class="slideshow middle col-lg-6 col-sm-5">
 
-        <div class="mySlides fade"> 
-          <img src="images/cakes_home/cherry_cake.jpg" alt="cake picture"  style="width:100%">
+        <div class="mySlides slide-fade"> 
+          <img class="img-fluid" src="images/cakes_home/cherry_cake.jpg" alt="cake picture" >
           <div class="text">Cherry cream sponge cake</div>
         </div>
 
-        <div class="mySlides fade"> 
-          <img src="images/cakes_home/dessert-ga0282781c_1920.jpg" alt="cake picture" style="width:100%">
+        <div class="mySlides slide-fade"> 
+          <img class="img-fluid" src="images/cakes_home/dessert-ga0282781c_1920.jpg" alt="cake picture" >
           <div class="text">Unicorn theme birthday cake</div>
         </div>
 
-        <div class="mySlides fade"> 
-          <img src="images/cakes_home/BirthdayMini.jpg" alt="cake picture" style="width:100%">
+        <div class="mySlides slide-fade"> 
+          <img class="img-fluid" src="images/cakes_home/BirthdayMini.jpg" alt="cake picture" >
           <div class="text">Mini mouse birthday cake</div>
         </div>
 
-        <div class="mySlides fade"> 
-          <img src="images/cakes_home/Wedding_Slide.jpg" alt="cake picture" style="width:100%">
+        <div class="mySlides slide-fade"> 
+          <img  class="img-fluid" src="images/cakes_home/Wedding_Slide.jpg" alt="cake picture">
           <div class="text">Multi-level vanilla cream wedding cake</div>
         </div>
 
@@ -132,110 +121,131 @@
 
       <div class="row separator_blank"></div>
    
-
-      <div class="row cards">
+      <div class="row d-flex justify-content-center cards">
         <h1>Discover our personalized Wedding cakes</h1>
 
         <div class="col-lg-3 col-md-3 col-sm-5 card-div">
-          <a href="#" class="btn card-img"><img src="images/cakes_home/Wedding1.jpg" alt="">
+          <a href="pages/Wedding cakes/Wedding_cakes.html" class="btn card-img"><img src="images/cakes_home/Wedding1.jpg" alt="wedding cake image">
           <div class="text-card">Price 50 - 200€</div></a>
         </div>
         <div class="col-lg-3 col-md-3 col-sm-5 card-div">
-          <a href="#" class="btn card-img"><img src="images/cakes_home/Wedding2.jpg" alt="">
+          <a href="pages/Wedding cakes/Wedding_cakes.html" class="btn card-img"><img src="images/cakes_home/Wedding2.jpg" alt="wedding cake image">
           <div class="text-card">Price 50 - 200€</div></a>
         </div>
         <div class="col-lg-3 col-md-3 col-sm-5 card-div">
-          <a href="#" class="btn card-img"><img src="images/cakes_home/candy-cake.jpg" alt="">
+          <a href="pages/Wedding cakes/Wedding_cakes.html" class="btn card-img"><img src="images/cakes_home/candy-cake.jpg" alt="wedding cake image">
             <div class="text-card">Price 50 - 200€</div></a>
         </div>
         <div class="col-lg-3 col-md-3 col-sm-5 card-div">
-          <a href="#" class="btn card-img"><img src="images/cakes_home/Wedding_sponge.jpg" alt="">
+          <a href="pages/Wedding cakes/Wedding_cakes.html" class="btn card-img"><img src="images/cakes_home/Wedding_sponge.jpg" alt="wedding cake image">
             <div class="text-card">Price 50 - 200€</div></a>
         </div>
 
       </div> <!--Cards div end-->
       
+      
 
-      <div class="row cards">
+      <div class="row d-flex justify-content-center cards">
         <h1>Discover our birthday cake selection</h1>
 
         <div class="col-lg-3 col-md-3 col-sm-5 card-div">
-          <a href="#" class="btn card-img"><img src="images/cakes_home/baby_1st_birthday.jpg" alt="">
+          <a href="pages/birthday/birthday.html" class="btn card-img"><img src="images/cakes_home/baby_1st_birthday.jpg" alt="birthday cake image">
             <div class="text-card">Price 50 - 200€</div></a>
         </div>
         <div class="col-lg-3 col-md-3 col-sm-5 card-div">
-          <a href="#" class="btn card-img"><img src="images/cakes_home/birthday_cupcakes.jpg" alt="">
+          <a href="pages/birthday/birthday.html" class="btn card-img"><img src="images/cakes_home/birthday_cupcakes.jpg" alt="birthday cake image">
             <div class="text-card">Price 50 - 200€</div></a>
         </div>
         <div class="col-lg-3 col-md-3 col-sm-5 card-div">
-          <a href="#" class="btn card-img"><img src="images/cakes_home/birthday_lolipop.jpg" alt="">
+          <a href="pages/birthday/birthday.html" class="btn card-img"><img src="images/cakes_home/birthday_lolipop.jpg" alt="birthday cake image">
             <div class="text-card">Price 50 - 200€</div></a>
         </div>
         <div class="col-lg-3 col-md-3 col-sm-5 card-div">
-          <a href="#" class="btn card-img"><img src="images/cakes_home/kids-cupcakes.jpg" alt="">
+          <a href="pages/birthday/birthday.html" class="btn card-img"><img src="images/cakes_home/kids-cupcakes.jpg" alt="birthday cake image">
             <div class="text-card">Price 50 - 200€</div></a>
         </div>
 
       </div> <!--Cards div end-->
 
-      <div class="row cards">
+      <div class="row d-flex justify-content-center cards">
         <h1>Discover our seasonal cakes selection</h1>
 
         <div class="col-lg-3 col-md-3 col-sm-5 card-div">
-          <a href="#" class="btn card-img"><img src="images/cakes_home/season1.jpg" alt="">
+          <a href="pages/occasion cakes/occasional.html" class="btn card-img"><img src="images/cakes_home/season1.jpg" alt="season cake image">
             <div class="text-card">Price 50 - 200€</div></a>
         </div>
         <div class="col-lg-3 col-md-3 col-sm-5 card-div">
-          <a href="#" class="btn card-img"><img src="images/cakes_home/front-view-sweet-chocolate-cake.jpg" alt="">
+          <a href="pages/occasion cakes/occasional.html" class="btn card-img"><img src="images/cakes_home/front-view-sweet-chocolate-cake.jpg" alt="season cake image">
             <div class="text-card">Price 50 - 200€</div></a>
         </div>
         <div class="col-lg-3 col-md-3 col-sm-5 card-div">
-          <a href="#" class="btn card-img"><img src="images/cakes_home/pink_cake.jpg" alt="">
+          <a href="pages/occasion cakes/occasional.html" class="btn card-img"><img src="images/cakes_home/pink_cake.jpg" alt="season cake image">
             <div class="text-card">Price 50 - 200€</div></a>
         </div>
         <div class="col-lg-3 col-md-3 col-sm-5 card-div">
-          <a href="#" class="btn card-img"><img src="images/cakes_home/blueberries-cake.jpg" alt="">
+          <a href="pages/occasion cakes/occasional.html" class="btn card-img"><img src="images/cakes_home/blueberries-cake.jpg" alt="season cake image">
             <div class="text-card">Price 50 - 200€</div></a>
         </div>
 
       </div> <!--Cards div end-->
 
-      <div class="row cards">
-        <h1>Discover our sweet boxes</h1>
+      <div class="row d-flex justify-content-center cards">
+        <h1>Discover our sweet boxes *in our store only*</h1>
 
         <div class="col-lg-3 col-md-3 col-sm-5 card-div">
-          <a href="#" class="btn card-img"><img src="images/cakes_home/sweet-box-macaroons.jpg" alt="">
-            <div class="text-card">Price 50 - 200€</div></a>
+          <div>
+            <img class="card-img" src="images/cakes_home/sweet-box-macaroons.jpg" alt="macaroons picture">
+            <div class="text-card">Price 50 - 200€</div>
+          </div>
         </div>
         <div class="col-lg-3 col-md-3 col-sm-5 card-div">
-          <a href="#" class="btn card-img"><img src="images/cakes_home/sweetBox1.jpg" alt="">
-            <div class="text-card">Price 50 - 200€</div></a>
+          <div>
+            <img class="card-img" src="images/cakes_home/sweetBox1.jpg" alt="sweet box picture">
+            <div class="text-card">Price 50 - 200€</div>
+          </div>
         </div>
         <div class="col-lg-3 col-md-3 col-sm-5 card-div">
-          <a href="#" class="btn card-img"><img src="images/cakes_home/sweetBox2.jpg" alt="">
-            <div class="text-card">Price 50 - 200€</div></a>
+          <div>
+            <img class="card-img" src="images/cakes_home/sweetBox2.jpg" alt="sweet box picture">
+            <div class="text-card">Price 50 - 200€</div>
+          </div>
         </div>
         <div class="col-lg-3 col-md-3 col-sm-5 card-div">
-          <a href="#" class="btn card-img"><img src="images/cakes_home/tartelettes.jpg" alt="">
-            <div class="text-card">Price 50 - 200€</div></a>
+          <div>
+            <img class="card-img" src="images/cakes_home/tartelettes.jpg" alt="little tarts picture">
+            <div class="text-card">Price 50 - 200€</div>
+          </div>
         </div>
-
       </div> <!--Cards div end-->
+  
 
+      
+        <h1 class="d-flex p-5 justify-content-center">How to order? We like to keep things simple: </h1>
 
-      <div class="row animation d-flex col-lg-12 col-sm-5">
-
+      <div class="row col-lg-12 col-md-10 col-sm-5 justify-content-evenly">
+        <div class="col-lg-3 col-sm-5 p-5">
+          <img  class="p-2" src="images/cakes_home/conversation.png"> 
+          <p>Contact us</p>
+        </div>
+        <div class="col-lg-3 col-sm-5 p-5">
+          <img class="p-2" src="images/cakes_home/shop.png"> 
+          <p>Come pick up your order at our store</p>
+        </div>
+        <div class="col-lg-3 col-sm-5 p-5">
+          <img class="p-2" src="images/cakes_home/cake.png"> 
+          <p>Enjoy your cakes</p>
+        </div>
       </div>
 
 
-      <!-- Bottom section -->
+      <!-- Bottom section with subscription form-->
 
       <div class = " row d-flex bottom justify-content-center" >
       
         <div class="subscription d-flex align-items-center"> 
           <div class="d-flex flex-column">
             <h2> Subscribe to our Newsletter and receive our discounts, special offers and members-only free recipes directly in your inbox:</h2>
-            <form class="d-flex align-self-center mt-5 p-2" name="submit-to-google-sheet">
+            <form class="d-flex align-self-center mt-5 p-2" name="submit-to-google-sheet" id="subscribe">
               <input type="email" name="email" placeholder="enter your email here" required>
               <button type="submit">
                 <img src="images/paper-plane.png"  alt="send icon" width="30px">
@@ -254,7 +264,7 @@
       <!-- Footer -->
 
       <div class="row footer d-flex">
-        <div class="col-lg-12 col-sm-5">
+        <div class="col-lg-12 col-md-10 col-sm-5">
           <p>@2022 - J.M.Z.Bakery. All Right Reserved</p>
           <br>
 
@@ -264,7 +274,7 @@
             <h6> Call us today on 0831603826</h2>
           </div>
 
-          <div class="col-lg-2 cl-md-2 float-end mb-5 p-4 me-3" > 
+          <div class="col-lg-2 col-md-3 float-end mb-5 p-4 me-3" > 
             <p>Follow us on Social Media</p>
             <div class="d-flex justify-content-evenly">
               <a href="https://www.facebook.com/"> <img class="social" src="images/facebook (1).png" alt="facebook logo"></a>
@@ -282,6 +292,13 @@
       </div> <!--Fotter div end-->
 
     </div>
+
+    <!-- Bootstrap scripts for JavaScript -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+      crossorigin="anonymous">
+    </script>
 
     <!--Placing JavaScript script after html loads (instead of in header) otherwise the slideshow only shows images after arrows have been clicked-->
     <script src="index.js"></script>

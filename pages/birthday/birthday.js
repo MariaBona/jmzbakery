@@ -6,7 +6,7 @@ var messagePrice=1; // price for message
 var candlePrice=3;  // price for Candle
 var total = 0;  //total cost of the cake
 var prevTotal = 0;  //previous value in cart
-var userName = "John"; //Default value for username when page loads
+var userName = "Log-In"; //Default value for username when page loads
 
 /* JQuery - javascript to invoke calculate cake cost - this function is called whenever input is selected, radio button checked  */
 $( document ).ready(function() {

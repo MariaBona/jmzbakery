@@ -37,7 +37,7 @@ function showMessage( ){
 	document.getElementById("showMessage").style.display="block";
 	document.getElementById("showMessage").innerHTML  = ("<h3 id=\"loginFail\">You have reached maximum tries. <br/><br/>Please try again later!</h3>"); 
 	/* retry - Link to Login page */
-	document.getElementById("showMessage").innerHTML  += ("<button class=\"btn btn-success \"  type=\"submit\" onClick=\"loginAgain\(\)\">Try again</button><br/>"); 
+	document.getElementById("showMessage").innerHTML  += ("<button class=\"btn btn-success add2CartButton\"  type=\"submit\" onClick=\"loginAgain\(\)\">Try again</button><br/>"); 
 	
 }
 
@@ -45,7 +45,3 @@ function showMessage( ){
 function loginAgain(){
 	return window.location.href="login.html";  /*opens login page*/
 }
-
-
-//Scroll back to top function: copied from https://dev.to/prnvbirajdar/react-hooks-component-to-smooth-scroll-to-the-top-35fd 
-  const toTop = () => window.scrollTo({top:0,behavior:'smooth'});

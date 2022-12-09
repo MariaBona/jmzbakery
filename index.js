@@ -61,7 +61,7 @@ function showSlides(n) {
  
   
  // Default values for Login ID 
- document.getElementById('LoginId').innerHTML = "John";
+ document.getElementById('LoginId').innerHTML = "log-in";
 // Default values for Cart Value
 document.getElementById('cart').innerHTML="0 \(€\)" ;	
 

@@ -10,7 +10,7 @@ html, body{
 
 h1,h2{
     font-family:'Dancing Script', cursive;
-    font-weight:900;
+	font-weight:900;
     color: #540808;
 }
 
@@ -342,50 +342,32 @@ form button{
 }
 
 
+
 /* Author2: Jayasri - START*/
 /* CSS About : START */
 
 .about-area{
-	border: 0px solid;	
-    background-size: 100% ;
-	background-attachment: scroll;
-	height: auto;
-	text-align: center;
-	background-size: cover; 
-	background-repeat: no-repeat; 
-	background-attachment: scroll; 
-	animation: 0s ease 0s 1 normal none running none; 		
+	border: 0px solid; background-size: 100% ; background-attachment: scroll; height: auto; text-align: center; background-size: cover; background-repeat: no-repeat; 
+	background-attachment: scroll; animation: 0s ease 0s 1 normal none running none; 		
 }
 
 .about-text{
-	border: 5px solid;
-	border-color: white;
-	border-radius: 100px;
-	border-radius: 5px;
-	margin-left: 100px;
-	margin-right: 100px;
-	text-align: left;    	
-	font-weight: bold;	
-	background:  url(images/logo-bw.png) no-repeat center ;	 
-	background-image: url("images/cakes_home/baking-fade.jpg");
-	background-size: cover; background-position: 50% 50%; background-repeat: no-repeat; 
-	background-attachment: scroll;	
-	box-shadow: 1px 1px 1px 1px #EAF1F0;	
-	font-family:'Helvetica', cursive;
-	font-size: 20px;
-    font-weight:100px;
-    color: #540808;
-    width: 90%;
-    align-items: center;   
-    padding:2% 10% 2%;
+	border: 5px solid; border-color: white; 	border-radius: 100px; 	border-radius: 5px; 	margin-left: 100px; 	margin-right: 100px;	text-align: left;    	
+	font-weight: bold; background-image: url("images/cakes_home/baking-fade.jpg"); background-size: cover; background-position: 50% 50%; 
+	background-repeat: no-repeat; background-attachment: scroll;	 box-shadow: 1px 1px 1px 1px #EAF1F0;	
+	font-size: 20px; font-weight:100px; color: #540808; width: 90%; align-items: center;   padding:2% 10% 2%;
 }
 
-.about img{  /* Best selling cakes - images below about us text cards*/
-    max-width:100%;
-    max-height:100%;
-    width: 250px;
-    height: 200px;
+.about-text-h1{
+	font-family: 'Brush Script MT', cursive;
+    font-weight:100;
+    color: #540808;
+	font-size: 45px;
 }
+.about img{  /* Best selling cakes - images below about us text cards*/
+    max-width:100%; max-height:100%; width: 250px;
+    height: 200px; 
+	}
 
 .about img:hover{
     transform: scale(1.1); /*creating slight zoom for images in cards*/
@@ -428,87 +410,38 @@ form button{
 
   
   .order-calc-area{
-	  justify-content: right;
-	  color: red;
+	  justify-content: right; color: red;
   }
 
   
-  .order-calc{
-	margin-left: 30px;
-	padding: 15px;
-	border: 0px solid;
-	border-radius: 2px;	    
-	font-family: "Arial", sans-serif;
-	font-size: 14px;
-	color: black;
-	font-weight: bold;	
-	width: 300px;
-	height:500px;
-	max-width: 100%;
-	max-height: 100%;
-	background-color: white;
-	box-shadow: 1px 1px 5px 2px #867979;
-	justify-content: center;
-	text-align: left;
-
+ .order-calc{
+	margin-left: 30px; 	padding: 15px;	border: 0px solid;	border-radius: 2px; font-family: "Arial", sans-serif;	font-size: 14px; color: black; font-weight: bold;	
+	width: 300px; 	height:500px; max-width: 100%;	max-height: 100%;	background-color: white; box-shadow: 1px 1px 5px 2px #867979;
+	justify-content: center; text-align: left;
 }
 
 
 .add2CartButton{	/* Add to cart button colors */
-	margin-left: 20px;	
-	padding: 10px;
-	border: 0px solid;
-	border-radius: 10px;
-	text-align: center; 
-	color: black;
-	font-weight:  bold;
-	border-color: #F4B498;
-	background-color:#F4B498;	
-	width: 100%;
-	max-width: 300px;	
-	
-	
+	margin-left: 20px; 	padding: 10px;	border: 0px solid;	border-radius: 10px;	text-align: center; 	color: black;	font-weight:  bold;
+	border-color: #F4B498; 	background-color:#F4B498;		width: 100%;	max-width: 300px;		
 }
 
-.add2CartButton:hover{	 /* Add to cart button colors change on mouse hover*/
-	
-	color: black;
-	border-color: #E08746;
-	background-color:#E08746;
-	
+.add2CartButton:hover{	 /* Add to cart button colors change on mouse hover*/	
+	color: black; 	border-color: #E08746;	background-color:#E08746;	
 }
 .order-calc-box{	
-	border-radius: 5px;
-	border: 0px solid;
-	font-weight: bold;
-    display: flex;
-	color: #002366;
-	background-color: #ffe4e1;
-	max-width: 100%;
-	max-height: 100%;
+	border-radius: 5px; 	border: 0px solid;	font-weight: bold;    display: flex;	color: #002366;	background-color: #ffe4e1;	max-width: 100%;	max-height: 100%;
 }
 
 .total-price{
-	color: black;
-	font-weight: bold;	
+	color: black; 	font-weight: bold;	
 }
 
 
 /* Button */
 .button {
-  background-color: black;   
-  border: 0px solid;
-  border-radius: 5%;   
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 4px 2px;
-  cursor: pointer;
-  font-size: 150%;
-  font-weight:  bold;
-  color: red;
-  
+  background-color: black;     border: 0px solid;  border-radius: 5%;     text-align: center;  text-decoration: none;  display: inline-block;  font-size: 16px;  margin: 4px 2px;
+  cursor: pointer;   font-size: 150%;  font-weight:  bold;  color: red;  
 }
 
 
@@ -516,65 +449,35 @@ form button{
 
 /* Login Form CSS - Start */
 #LoginId{
-	display: space-between;
-	font-size: 7px;
-	font-weight: italic;
-	color: purple;
+	display: space-between; 	
+	font-size: 7px;	
+	font-weight: italic; 	
+
 	text-align: center;	
 	text-transform: lowercase;	
 }
 
 .login-form-area{	
-	padding: 50px;	
-	border: 1 px solid;
-	border-radius: 10px;
-	text-align: center;    
-	font-family: "Arial", sans-serif;
-	font-size: 20px;
-	color: black;
-	font-weight: bold;
-	width: 400px;
-	max-width: 110%;
-	height: 500px;		
-	background-image: url("images/cakes_home/baking-fade.jpg");
+	padding: 50px;	 	border: 1 px solid; border-radius: 10px;
+	text-align: center;    font-family: "Arial", sans-serif;
+	font-size: 20px; color: black; font-weight: bold;
+	width: 400px; max-width: 110%; height: 500px;		background-image: url("images/cakes_home/baking-fade.jpg");
 	background-size: cover; background-position: 50% 50%; background-repeat: no-repeat; 
-	background-attachment: fixed; 	
-	text-align: center;
-	
+	background-attachment: fixed; 	text-align: center; 	
 }
 
 .login-form{
-	margin-left: 10px;
-	padding-right: 140px;
-	padding-top: 50px;
-	padding-bottom: 50px;	
-	width: 95%;
-	height: 300px;
-	border: 10px solid;
-	border-radius: 2px;
-	border-color: white;	
-	text-align: left;    
-	font-family: "Arial", sans-serif;
-	font-size: 14px;
-	color: black;
-	font-weight: bold;	
-	background-color: white;	
-	box-shadow: 1px 1px 1px 1px #867979;		
+	margin-left: 10px;  padding-right: 140px; padding-top: 50px; padding-bottom: 50px;	width: 95%;	height: 300px;
+	border: 10px solid; border-radius: 2px; border-color: white;	text-align: left;   font-family: "Arial", sans-serif;
+	font-size: 14px; color: black; font-weight: bold;	background-color: white;	box-shadow: 1px 1px 1px 1px #867979;		
 }
 
 .login-text-box{	
-	border: 1px solid;
-	border-color: white;
-	font-weight: bold;
-	color: #002366;
-	background-color: #ffe4e1;
-	box-shadow: 1px 1px 1px 2px #867979;
+	border: 1px solid; border-color: white; font-weight: bold; color: #002366; background-color: #ffe4e1; box-shadow: 1px 1px 1px 2px #867979;
 }
 
 #loginFail{
-	color: red;
-	font-size:20px;
-	width: 100%;
+	color: red;  font-size:20px; font-weight: bold; width: 200%; text-align: center;
 }
 
 /* Login Form CSS - End */

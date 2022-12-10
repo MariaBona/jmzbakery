@@ -131,15 +131,11 @@
 
           <!--form to send email-->
         </div>
-        <div class="row separator_blank"></div>
+        <div id="contact-us" class="row separator_blank"></div>
         <h3>Or leave us your details, we will contact you shortly</h3>
         <div class="row separator_blank"></div>
-        <div class="details-box" id="contact-form">
-          
-          <form onsubmit="sendEmail(); reset(); return false">
-            
-            
-          
+        <div class="details-box">
+          <form id="contact-form" onsubmit="sendEmail(); reset(); return false">
             <label for="Name">Enter your name:</label><br>
             <input type="text" id="name-input" name="Name" placeholder="John Smith" required><br>
             <br>
@@ -196,6 +192,8 @@
 
       <script src="https://smtpjs.com/v3/smtp.js"></script>
       <script>
+        var body = "";
+        /* check for 'OK' message from smtp server */
         function checkResponse(message) {
           if (message != 'OK') {
             alert(message);
@@ -204,12 +202,25 @@
             alert("Thank you for contacting us, we will come back to you within 24 hours");
           }
         }
+
+        /* send email with customer details on form submit */
         function sendEmail() {
-          var body = "name: " + document.getElementById("name-input").value +
-            " e-mail: " + document.getElementById("e-mail-input").value +
-            " phone: " + document.getElementById("telephone-input").value +
-            " Sent the following message: " + document.getElementById("message-input").value;
-          
+          const contact_form = document.getElementById("contact-form");
+          const child_nodes = contact_form.childNodes;
+          /* loop throught all child elements of the contact form and compose the e-mail body */
+          for (i = 0; i < child_nodes.length; i++) {
+            /* ignore the submit button and labels */
+            if (child_nodes[i].tagName == 'INPUT' && child_nodes[i].type != 'submit') {
+              body += child_nodes[i].name + ': ' + child_nodes[i].value + '\n';
+            }
+            /* handle the textarea tag specially */
+            else if (child_nodes[i].tagName == 'TEXTAREA') {
+              body += "Sent the following message:\n";
+              body += child_nodes[i].value;
+            }
+          }
+
+          /* use smtp.js Email.send function and wait for response */
           Email.send({
             Host : "smtp.elasticemail.com",
             Username : "mariabonarska@gmail.com",

@@ -4,20 +4,14 @@ h3 {
     color: #540808;
 }
 
-
 .container-contact {
     display: flex;
     flex-direction: column;
 }
 
 .container-contact div {
-    /*border: 2px solid #540808;*/
 	padding: 10px;
 	justify-content: center;
-}
-
-.row {
-    /*border: 2px solid red;*/
 }
 
 .find-us {
@@ -37,7 +31,11 @@ h3 {
 
 .details-box {
     padding: 15px;
+    border: 5px solid #540808;
     background-color: white;
     max-width: fit-content;
-    align-self  : center;
+    align-self: center;
+    background-image: url("../../images/cakes_home/baking-fade.jpg");
+    justify-content: stretch;
+    text-align: left;
 }

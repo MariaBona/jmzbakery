@@ -1,6 +1,6 @@
 //Author: Zouboulia
 
-//W3Schools Javascript slideshow below: 
+//W3Schools Javascript slideshow below: https://www.w3schools.com/howto/howto_js_slideshow.asp
 let slideIndex = 1;
 showSlides(slideIndex); //calls function showSlides and passing slideIndex
 
@@ -36,7 +36,7 @@ function showSlides(n) {
 
 
 
-// Code copied from: https://github.com/jamiewilson/form-to-google-sheets
+// Code copied from: https://github.com/jamiewilson/form-to-google-sheets for connecting form to Google sheets
 // Connected Form Tutorial: https://www.youtube.com/watch?v=a8Om25FbaJA
 
   const scriptURL = 'https://script.google.com/macros/s/AKfycbycuxmeXUKvBUDqfJjYuehJVpkRWl2xFhZ1rRAiaY4iVk5pUONmfJc21cJll7wl2HE/exec'
@@ -66,8 +66,8 @@ function showSlides(n) {
 document.getElementById('cart').innerHTML="0 \(€\)" ;	
 
 
-//navbar sticky. Code from W3Schools
 
+//navbar sticky. Code from W3Schools: https://www.w3schools.com/howto/howto_js_navbar_sticky.asp
 window.onscroll = function() {myFunction()}; //function below is executed when user scrolls
 
 var navbar = document.getElementById("navbar"); //getter for navbar

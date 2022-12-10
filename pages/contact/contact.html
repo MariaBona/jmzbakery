@@ -4,6 +4,8 @@
 <html>
   <head>
     <title>Contact us page</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="images/logo.png">
 
     <!-- Embedding font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -162,81 +164,82 @@
       <!-- Footer -->
 
       <div class="row footer d-flex">
-        <div class="col-lg-12 col-md-12 col-sm-5">
+        <div>
           <p>@2022 - J.M.Z.Bakery. All Right Reserved</p>
           <br>
 
           <div class="row d-flex justify-content-evenly">
-          <div class="col-lg-4 cl-md-2 p-4 mb-5 me-3">
-            <img class="icon-style mb-2 mt-2"  src="../../images/phone-call.png"> 
-            <h6> Call us today on 0831603826</h2>
-          </div>
-
-          <div class="col-lg-2 col-md-3 float-end mb-5 p-4 me-3" > 
-            <p>Follow us on Social Media</p>
-            <div class="d-flex justify-content-evenly">
-              <a href="https://www.facebook.com/"> <img class="social" src="../../images/facebook (1).png" alt="facebook logo"></a>
-              <a href="https://www.instagram.com/"><img class="social" src="../../images/instagram.png" alt="instagram logo"></a>
+            <div class="col-lg-4 cl-md-2 p-4 mb-5 me-3">
+              <img class="icon-style mb-2 mt-2"  src="../../images/phone-call.png"> 
+              <h6> Call us today on 0831603826</h6>
             </div>
-          </div>
+
+            <div class="col-lg-2 col-md-3 float-end mb-5 p-4 me-3" > 
+              <p>Follow us on Social Media</p>
+              <div class="d-flex justify-content-evenly">
+                <a href="https://www.facebook.com/"> <img class="social" src="../../images/facebook (1).png" alt="facebook logo"></a>
+                <a href="https://www.instagram.com/"><img class="social" src="../../images/instagram.png" alt="instagram logo"></a>
+              </div>
+            </div>
         </div>
 
         <div>
           <button class="toTop" onclick="toTop()"> back to top</button> 
         </div>
 
-        </div>
+      </div>
 
       </div> <!--Footer div end-->
+
     </div><!--Container fluid div end-->
 
-      <script src="https://smtpjs.com/v3/smtp.js"></script>
-      <script>
-        var body = "";
-        /* check for 'OK' message from smtp server */
-        function checkResponse(message) {
-          if (message != 'OK') {
-            alert(message);
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script>
+      var body = "";
+      /* check for 'OK' message from smtp server */
+      function checkResponse(message) {
+        if (message != 'OK') {
+          alert(message);
+        }
+        else {
+          alert("Thank you for contacting us, we will come back to you within 24 hours");
+        }
+      }
+
+      /* send email with customer details on form submit */
+      function sendEmail() {
+        const contact_form = document.getElementById("contact-form");
+        const child_nodes = contact_form.childNodes;
+        /* loop throught all child elements of the contact form and compose the e-mail body */
+        for (i = 0; i < child_nodes.length; i++) {
+          /* ignore the submit button and labels */
+          if (child_nodes[i].tagName == 'INPUT' && child_nodes[i].type != 'submit') {
+            body += child_nodes[i].name + ': ' + child_nodes[i].value + '\n';
           }
-          else {
-            alert("Thank you for contacting us, we will come back to you within 24 hours");
+          /* handle the textarea tag specially */
+          else if (child_nodes[i].tagName == 'TEXTAREA') {
+            body += "Sent the following message:\n";
+            body += child_nodes[i].value;
           }
         }
 
-        /* send email with customer details on form submit */
-        function sendEmail() {
-          const contact_form = document.getElementById("contact-form");
-          const child_nodes = contact_form.childNodes;
-          /* loop throught all child elements of the contact form and compose the e-mail body */
-          for (i = 0; i < child_nodes.length; i++) {
-            /* ignore the submit button and labels */
-            if (child_nodes[i].tagName == 'INPUT' && child_nodes[i].type != 'submit') {
-              body += child_nodes[i].name + ': ' + child_nodes[i].value + '\n';
-            }
-            /* handle the textarea tag specially */
-            else if (child_nodes[i].tagName == 'TEXTAREA') {
-              body += "Sent the following message:\n";
-              body += child_nodes[i].value;
-            }
-          }
-
-          /* use smtp.js Email.send function and wait for response */
-          Email.send({
-            Host : "smtp.elasticemail.com",
-            Username : "mariabonarska@gmail.com",
-            Password : "4924A800CA9C647D847D7132B78B7637155C",
-            To : 'jmz.bakeryproject@gmail.com',
-            From : 'mariabonarska@gmail.com',
-            Subject : "JMZ Contact Enquiry",
-            Body : body
-          }).then(
-            message => checkResponse(message)
-          );
-        }
-      </script>
+        /* use smtp.js Email.send function and wait for response */
+        Email.send({
+          Host : "smtp.elasticemail.com",
+          Username : "mariabonarska@gmail.com",
+          Password : "4924A800CA9C647D847D7132B78B7637155C",
+          To : 'jmz.bakeryproject@gmail.com',
+          From : 'mariabonarska@gmail.com',
+          Subject : "JMZ Contact Enquiry",
+          Body : body
+        }).then(
+          message => checkResponse(message)
+        );
+      }
+    </script>
 	  
 	  <!-- Script to load default value for login and cart -->
 	  <script src="contact.js"></script>
-	  
+
   </body>
 </html>

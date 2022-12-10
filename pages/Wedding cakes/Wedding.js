@@ -1,7 +1,7 @@
- 
+ // Default values for Login ID 
  document.getElementById('LoginId').innerHTML = "log-in";
 // Default values for Cart Value
-document.getElementById('cart').innerHTML="0 \(€\)" ;		
+document.getElementById('cart').innerHTML="0 \(€\)" ;	
 
 
 //Contact us button redirect to contact page

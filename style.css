@@ -95,10 +95,9 @@ h1,h2{
   
   .tagline {  
     /* This section calls the tagline animation */
-    animation: 1s ease-out 0s 1 tagline;
+    animation: 3s tagline;
     background: white;
     padding: 30px;
-    animation-duration: 2s;
   }
 
 
@@ -340,6 +339,9 @@ form button{
 .social:hover{
     opacity: 0.5;
 }
+
+/* Author1: Zouboulia - END*/
+
 
 
 

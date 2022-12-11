@@ -1,7 +1,6 @@
 /*Author1: Zouboulia */
 /* Author2: Jayasri (About, Login Form, Birthday Cake Order Form)*/
 
-
 html, body{
     text-align: center;
     color: black;
@@ -486,7 +485,104 @@ form button{
 
 /* Author2: Jayasri - END*/
 
+/* Author3: Maria  START */
 
+/* Seasonal Cakes - CSS */
+.container-season {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.container-season img {vertical-align: middle;}
+
+.container-season .content-season {
+    position: absolute;
+    bottom: 0;
+    background: rgb(0, 0, 0); /* Fallback color */
+    background: rgba(0, 0, 0, 0.5); /* Black background with 0.5 opacity */
+    color: #f1f1f1;
+    width: 100%;
+    padding: 20px;
+}
+
+.container-season p {
+    color: white;
+    font-family:'Dancing Script', cursive;
+}
+
+.container-season h1 {
+    color: white;
+}
+
+/* Contact Us - CSS */
+.container-contact {
+    display: flex;
+    flex-direction: column;
+}
+
+.container-contact h3 {
+    font-family:'Dancing Script', cursive;
+    font-weight:900;
+    color: #540808;
+}
+
+.container-contact div {
+	padding: 10px;
+	justify-content: center;
+}
+
+.find-us {
+    display: flex;
+    flex-direction: row;
+}
+
+@media screen and (max-width: 860px) {
+    .find-us {
+        flex-direction: column;
+    }
+}
+
+.address-box {
+    flex: 1;
+}
+
+.map-box {
+    flex: 2;
+    align-self: stretch;
+}
+
+.map-box iframe {
+    width: 90%;
+    
+}
+
+.details-box {
+    padding: 15px;
+    border: 5px solid #540808;
+    background-color: white;
+    max-width: fit-content;
+    width: 90%;
+    align-self: center;
+    background-image: url("images/cakes_home/baking-fade.jpg");
+    text-align: left;
+}
+
+.details-box textarea {
+    width: 100%;
+}
+
+.details-box input {
+    width: 60%;
+    min-width: 330px;
+}
+
+.details-box input:last-of-type {
+    min-width: 50px;
+    width: fit-content;
+}
+
+/* Author3: Maria  END */
 
 
 

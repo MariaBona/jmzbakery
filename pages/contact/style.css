@@ -26,7 +26,17 @@ h3 {
 }
 
 .address-box {
-    width: 40%
+    flex: 1;
+}
+
+.map-box {
+    flex: 2;
+    align-self: stretch;
+}
+
+.map-box iframe {
+    width: 90%;
+    
 }
 
 .details-box {
@@ -34,8 +44,22 @@ h3 {
     border: 5px solid #540808;
     background-color: white;
     max-width: fit-content;
+    width: 90%;
     align-self: center;
     background-image: url("../../images/cakes_home/baking-fade.jpg");
-    justify-content: stretch;
     text-align: left;
+}
+
+.details-box textarea {
+    width: 100%;
+}
+
+.details-box input {
+    width: 60%;
+    min-width: 330px;
+}
+
+.details-box input:last-of-type {
+    min-width: 0px;
+    width: fit-content;
 }

@@ -110,12 +110,12 @@
       <!--Container for flexboxes-->
       <div class="container-contact">
         <div class="find-us">
-          <div class="map-box"> <!--insert map here beside the address on the right-->
+          <div class="map-box">
             <h3><strong>Get directions:</strong></h3><br>
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2382.2164941216183!2d-6.471266348651563!3d53.33938067987932!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x486773c966cfccff%3A0xd7eaa366a1bc45a6!2s19%20Adamstown%20Blvd%2C%20Finnstown%2C%20Lucan%2C%20Co.%20Dublin%2C%20K78%20W894!5e0!3m2!1sen!2sie!4v1670000911147!5m2!1sen!2sie" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             <div class="row separator_blank"></div>
           </div>
-          <div class="address-box">
+          <div class="address-box"><!--insert address here beside the map on the right-->
             
             <h3><strong>Our Contacts:</strong></h3><br>
               <div class="row separator_blank"></div>
@@ -130,32 +130,29 @@
                 Lucan</p>
             
           </div>
-
-          <!--form to send email-->
         </div>
+        <!--form to send email-->
         <div id="contact-us" class="row separator_blank"></div>
         <h3>Or leave us your details, we will contact you shortly</h3>
         <div class="row separator_blank"></div>
         <div class="details-box">
           <form id="contact-form" onsubmit="sendEmail(); reset(); return false">
-            <label for="Name">Enter your name:</label><br>
+            <label for="name-input">Enter your name:</label><br>
             <input type="text" id="name-input" name="Name" placeholder="John Smith" required><br>
             <br>
-            <label for="E-mail">Enter your e-mail address:</label><br>
+            <label for="e-mail-input">Enter your e-mail address:</label><br>
             <input type="email" id="e-mail-input" name="E-mail" placeholder="John.Smith@gmail.com" required><br>
             <br>
-            <label for="Number">Enter your telephone number:</label><br>
+            <label for="telephone-input">Enter your telephone number:</label><br>
             <input type="tel" id="telephone-input" name="Number" placeholder="+353" required><br>
             <br>
-            <label for="Message">Enter here your message:</label><br>
+            <label for="message-input">Enter here your message:</label><br>
             <textarea id="message-input" name="Message" rows="4" cols="50"></textarea><br><br>
             <input type="submit" id="button" value="Submit">
           </form>
         </div>
         <!-- Bottom section Follow Us on FB ref Meta for Developers-->
-        
         <p><h3>Find us on facebook:</h3></p>
-        
         <div class="fb-page" data-href="https://www.facebook.com/profile.php?id=100088157383912" data-tabs="timeline" data-width="500" data-height="" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/profile.php?id=100088157383912" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/profile.php?id=100088157383912">J.M.Z Bakery</a></blockquote></div>
         <div class="row separator_blank"></div>
         <p></p>
@@ -195,7 +192,6 @@
 
     <script src="https://smtpjs.com/v3/smtp.js"></script>
     <script>
-      var body = "";
       /* check for 'OK' message from smtp server */
       function checkResponse(message) {
         if (message != 'OK') {
@@ -210,6 +206,7 @@
       function sendEmail() {
         const contact_form = document.getElementById("contact-form");
         const child_nodes = contact_form.childNodes;
+        var body = "";
         /* loop throught all child elements of the contact form and compose the e-mail body */
         for (i = 0; i < child_nodes.length; i++) {
           /* ignore the submit button and labels */
@@ -217,7 +214,7 @@
             body += child_nodes[i].name + ': ' + child_nodes[i].value + '\n';
           }
           /* handle the textarea tag specially */
-          else if (child_nodes[i].tagName == 'TEXTAREA') {
+          else if (child_nodes[i].tagName == 'TEXTAREA' && child_nodes[i].value != "") {
             body += "Sent the following message:\n";
             body += child_nodes[i].value;
           }

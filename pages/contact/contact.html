@@ -152,7 +152,7 @@
         </div>
         <!-- Bottom section Follow Us on FB ref Meta for Developers-->
         <p><h3>Find us on facebook:</h3></p>
-        <div class="fb-page" data-href="https://www.facebook.com/profile.php?id=100088157383912" data-tabs="timeline" data-width="500" data-height="" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/profile.php?id=100088157383912" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/profile.php?id=100088157383912">J.M.Z Bakery</a></blockquote></div>
+        <div class="fb-page" data-href="https://www.facebook.com/profile.php?id=100088157383912" data-tabs="timeline" data-width="400" data-height="" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/profile.php?id=100088157383912" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/profile.php?id=100088157383912">J.M.Z Bakery</a></blockquote></div>
         <div class="row separator_blank"></div>
         <p></p>
       </div>
@@ -191,11 +191,37 @@
 
     <script src="https://smtpjs.com/v3/smtp.js"></script>
     <script>
+      /* add event listener on email and telephone input changes */
+      var email_input = document.getElementById("e-mail-input");
+      email_input.oninput = () => checkRequired();
+      var tel_input = document.getElementById("telephone-input");
+      tel_input.oninput = () => checkRequired();
+
+      /* this function checks if any of the e-mail or telephone inputs
+         are filled and then removes the required attribute so to allow
+         either the e-mail or telephone number to be left empty */
+      function checkRequired() {
+        /* if e-mail is provided, telephone input no longer needs to be required */
+        if (email_input.value == "") {
+          tel_input.setAttribute("required", "true");
+        } else {
+          tel_input.removeAttribute("required");
+        }
+        /* if phone number is provided, e-mail input no longer needs to be required */
+        if (tel_input.value == "") {
+          email_input.setAttribute("required", "true");
+        } else {
+          email_input.removeAttribute("required");
+        }
+      }
+
       /* check for 'OK' message from smtp server */
       function checkResponse(message) {
+        /* if the response is not OK, pass the server response in verbatim */
         if (message != 'OK') {
           alert(message);
         }
+        /* confirm the email sending otherwise */
         else {
           alert("Thank you for contacting us, we will come back to you within 24 hours");
         }
@@ -203,6 +229,7 @@
 
       /* send email with customer details on form submit */
       function sendEmail() {
+        /* get all child nodes of the contact form */ 
         const contact_form = document.getElementById("contact-form");
         const child_nodes = contact_form.childNodes;
         var body = "";

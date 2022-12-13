@@ -12,7 +12,7 @@ function checkLogin(){
 	var username = document.getElementById("userid").value;
 	var password = document.getElementById("psw").value;
 	
-	/* Login will only work for two users as below  - John and Smith - password same as login id*/
+	/* Login will only work for two users as below  - John and John - password same as login id*/
 	if ( (username == "John" && password == "John") ){
 		document.getElementById('LoginId').innerHTML  = username ;
 		alert ("\nWelcome " +username +"\n You are now in sweetest place JMZ Bakery");

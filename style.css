@@ -110,6 +110,7 @@ h1,h2{
     .middle{
         display: flex;
         flex-wrap: wrap;
+	max-width: 800px;
         width: 60%;
         position: relative; /* position is relative here and the arrows will be positioned absolute on top of this div */
         margin: auto;
@@ -250,6 +251,7 @@ h5,p, h6{
 .wed-container{
     position: relative;
     text-align: center;
+    max-width: 500px;
     color: white;
 }
 
